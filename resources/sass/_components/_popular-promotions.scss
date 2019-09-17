@@ -1,0 +1,46 @@
+.popular-promotions {
+  .tabs {
+    & .tab-list {
+      a {
+        font-family: "Montserrat";
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 35px;
+        letter-spacing: normal;
+        text-align: left;
+        color: #29170f;
+      }
+    }
+  }
+  .popular-sale img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &_link a,
+  &_link a:hover {
+    color: #29170F;
+    font-size: 1.1rem;
+  }
+  .card-prod {
+    position: relative;
+    border: 1px solid transparent;
+    height: calc(100% + 50px);
+    padding: 20px 0;
+    width: 100%;
+
+    &:hover {
+      width: 100%;
+      height: calc(100% + 55px);
+      background: #fff;
+      z-index: 50;
+      border: 1px solid #ccc;
+    }
+
+    &:hover .card-hover {
+      display: block;
+      text-align: center;
+    }
+  }
+}

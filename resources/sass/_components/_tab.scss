@@ -1,0 +1,20 @@
+.tab {
+  border-bottom: 1px solid transparent;
+  &.active, &:hover {
+    font-weight: 500 !important;
+    border-bottom: 1px solid $grey;
+    transition: .3s ease-in-out;
+  }
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.show {
+  display: block;
+}

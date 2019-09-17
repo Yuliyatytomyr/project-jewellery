@@ -1,0 +1,39 @@
+.slider-blog{
+  height: 100%;
+}
+.slide-blog{
+  min-height: 210px!important;
+}
+.articleBlogSlide{
+  background: #333435;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 0px 10px 10px;
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+.blog-pagination{
+  bottom: -30px !important;
+}
+@media(max-width: 767px){
+  .slide-blog{
+    min-height: 150px !important;
+  }
+  .articleBlogSlide{
+    padding: 10px 0px 0px 10px;
+    p{
+      font-size: 10px!important;
+    }
+  }
+  .moreNews{
+    display: flex;
+    justify-content: center;
+    a {
+      font-size: 0.9rem!important;
+    }
+  }
+}

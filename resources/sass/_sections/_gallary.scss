@@ -1,0 +1,14 @@
+.gallery-home {
+  & img:hover {
+    filter: brightness(0.5);
+  }
+  &_txt-img {
+    bottom: 0;
+    right: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    &.left {
+      left: 20px;
+    }
+  }
+}

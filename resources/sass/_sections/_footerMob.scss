@@ -1,0 +1,23 @@
+@media (max-width: 991px) {
+  .logoFoot-mob {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footerCategoryMob {
+    border-bottom: 1px solid white;
+    padding: 0px 0px 8px;
+  }
+  .mainArticleFooter{
+    font-size: 0.9rem!important;
+    font-weight: 500;
+  }
+  .menu_item{
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .footer-logo {
+    width: 125px;
+  }
+}

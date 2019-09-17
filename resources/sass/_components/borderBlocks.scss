@@ -1,0 +1,25 @@
+.borderAll-block {
+  & a {
+    text-decoration: underline;
+    color: $grey;
+  }
+  & a:hover {
+    color: $grey;
+  }
+  & .delivery-store_packaging {
+    & img {
+      width: 150px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .borderAll-block a {
+    font-size: 15px !important;
+  }
+  .delivery-store_ways-txt {
+    font-size: 1rem !important;
+  }
+  .delivery-store_ways-list {
+    font-size: 0.7rem !important;
+  }
+}

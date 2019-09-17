@@ -1,0 +1,100 @@
+button {
+    outline: none;
+    background: transparent;
+    border: transparent;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+
+.btn-password {
+    right: 0;
+    background: transparent !important;
+    border: transparent !important;
+    padding: 0 !important;
+    color: $grey !important;
+    top: 85px;
+    right: 0;
+    transform: translate(-50%, 50%);
+}
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem transparent !important;
+}
+
+.btn-home a,
+.btn-profile {
+    color: #fff;
+    background: #000;
+    padding: 9px 20px 10px;
+    width: 199px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    font-size: 14px;
+    &_border {
+        color: $grey;
+        border: 2px solid $grey;
+        padding: 9px 20px 10px;
+        width: 199px;
+        font-family: 'Montserrat-Medium';
+        font-size: 14px;
+        &:hover {
+            background: $grey;
+            color: #fff;
+        }
+    }
+}
+.btn-home a:hover,
+.btn-profile:hover {
+    text-align: center;
+    color: #fff;
+    background: #333;
+    border: 2px solid transparent;
+}
+
+.btn-class {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 40px;
+    padding: 5px 9px;
+    margin-right: 10px;
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: uppercase;
+    &_new {
+        background: #caae6c;
+    }
+    &_top {
+        background: #ff8a00;
+    }
+    &_super {
+        background: $red;
+    }
+    &_empty{
+        width:21px;
+        height:16px;
+        background: transparent;
+    }
+}
+@media (min-width: 992px) {
+    .btn-class_empty{
+        height:21px;
+    }
+}
+.btn-question {
+    border: 1px solid $grey;
+    border-radius: 50%;
+    line-height: 1;
+    padding: 2px 5px;
+}
+
+.input-group-append {
+    .btn-profile {
+        padding: 4px 34px 4px;
+    }
+}

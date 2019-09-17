@@ -1,0 +1,40 @@
+.card-store {
+  .card-store_img {
+    .card-store_img-prev {
+      & img {
+        width: 75px;
+        height: 75px;
+      }
+    }
+    .card-store_img-main {
+      & img {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+  .card-store_content {
+    & .card-static_price {
+      font-size: 1.1rem;
+    }
+    & .card-static_sale-price {
+      font-size: 1.4rem;
+      font-family: 'Montserrat-Medium';
+    }
+    & .card-static_sale {
+      transform: scale(1.6);
+    }
+  }
+  .size-select{
+    & .size-select_txt {
+      font-size: 1.1rem;
+    }
+  }
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+}
+
+

@@ -1,0 +1,203 @@
+.dropdown-menu {
+  min-width: 0 !important;
+  transform: translate(-36%, 60%) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+.contact-header {
+  padding: 10px;
+  z-index: 1;
+  cursor: pointer;
+  &_hide.open {
+    display: block;
+  }
+  &.open {
+    background-color: #fff;
+    color: $grey;
+    z-index: 10;
+  }
+  &_number {
+    font-weight: 400;
+    font-size: 1.2rem;
+    &-content {
+      font-size: 1rem;
+    }
+  }
+  &_icon {
+    transition: 0.3s;
+    & svg {
+      width: 16px;
+      stroke: #fff;
+    }
+  }
+  &_icon.open {
+    transform: rotate(180deg);
+    transition: 0.3s;
+    & svg {
+      stroke: $grey;
+    }
+  }
+
+}
+
+.select-cust {
+  z-index: 2;
+  padding: 0 5px;
+  cursor: pointer;
+
+  .no-a {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &_hide {
+    & a {
+      color: #fff;
+      font-size: 0.8rem;
+    }
+    a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: $grey;
+      text-decoration-skip-ink: none;
+    }
+  }
+
+  &_hide.open {
+    transition: background-color .2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    & .active a {
+      color: $grey;
+      pointer-events: none;
+      cursor: default;
+    }
+    & .active-option a {
+      color: $grey;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    & .active-option {
+      display: flex;
+      background: #fff;
+      width: auto;
+      top: 100%;
+      right: 0px;
+      position: absolute;
+      top: 100%;
+      padding: 0 5px;
+      width: 100%;
+    }
+  }
+
+  .active-option {
+    display: none;
+  }
+
+  &.open {
+    background-color: #fff;
+    color: #fff;
+    height: auto;
+    position: relative;
+  }
+
+
+  .header {
+    &_icon {
+      transition: 0.3s;
+      & svg {
+        width: 16px;
+        stroke: #fff;
+      }
+    }
+
+    &_icon.open {
+      transform: rotate(180deg);
+      transition: 0.3s;
+
+      & svg {
+        stroke: $grey;
+      }
+    }
+  }
+}
+
+.select-custFoot{
+  z-index: 2;
+  padding: 0 5px;
+  cursor: pointer;
+
+  .no-a {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &_hide {
+    & a {
+      color: #fff;
+      font-size: 0.8rem;
+    }
+    a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: $grey;
+      text-decoration-skip-ink: none;
+    }
+  }
+  &_hide.open {
+    transition: background-color .2s ease;
+    display: flex;
+    flex-direction: column;
+    & .active a {
+      color: #fffff;
+      pointer-events: none;
+      cursor: default;
+    }
+    & .active-option a {
+      color: #ffffff;
+      width: 100%;
+      display: list-item;
+      line-height: 30px;
+    }
+    & .active-option {
+      display: flex;
+      color: white;
+      background: #000;
+      width: auto;
+      padding: 16px 0px 10px;
+      width: 100%;
+    }
+  }
+
+  .active-option {
+    display: none;
+  }
+
+  &.open {
+    background-color: #000;
+    color: #fff;
+    height: auto;
+    position: relative;
+  }
+  .header {
+    &_iconFoot {
+      transition: 0.3s;
+      & svg {
+        width: 16px;
+        stroke: #fff;
+      }
+    }
+    &_iconFoot.open {
+      transform: rotate(180deg);
+      transition: 0.3s;
+      & svg {
+        stroke: #fff;
+      }
+    }
+  }
+}
+

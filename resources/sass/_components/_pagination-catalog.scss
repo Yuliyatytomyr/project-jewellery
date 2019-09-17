@@ -1,0 +1,14 @@
+.elementPagination{
+  margin: 10px;
+  font-size: 16px;
+  a{
+    color: $grey;
+    &:hover{
+      color: #000;
+      font-size: 500;
+    }
+  }
+}
+.disabled{
+  color: $grey;
+}

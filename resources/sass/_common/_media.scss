@@ -1,0 +1,318 @@
+/* Media */
+// small sizes
+@media (min-width: 576px) {
+	.dsm {
+		&-b {
+		  display: block;
+		}
+		&-n {
+		  display: none;
+		}
+		&-f {
+		  display: flex;
+		}
+	}
+	.jcsm {
+		&-c {
+			justify-content: center;
+		}
+		&-a {
+			justify-content: space-around;
+		}
+		&-b {
+			justify-content: space-between;
+		}
+		&-s {
+			justify-content: flex-start;
+		}
+		&-e {
+			justify-content: flex-end;
+		}
+	}
+	.aism {
+		&-c {
+			align-items: center;
+		}
+		&-s {
+			align-items: flex-start;
+		}
+		&-e {
+			align-items: flex-end;
+		}
+	}
+	.fdsm {
+		&-c {
+			flex-direction: column;
+		}
+		&-cr {
+			flex-direction: column-reverse;
+		}
+		&-r {
+			flex-direction: row;
+		}
+		&-rr {
+			flex-direction: row-reverse;
+		}
+	}
+	.tsm {
+		&-l {
+			text-align: left;
+		}
+		&-r {
+			text-align: right;
+		}
+		&-c {
+			text-align: center
+		}
+		&-u {
+			text-transform: uppercase;
+		}
+		&-nw {
+			white-space: nowrap;
+		}
+	}
+}
+
+// medium sizes
+@media (min-width: 768px) {
+	.dmd {
+		&-b {
+		  display: block;
+		}
+		&-n {
+		  display: none;
+		}
+		&-f {
+		  display: flex;
+		}
+	}
+	.jcmd {
+		&-c {
+			justify-content: center;
+		}
+		&-a {
+			justify-content: space-around;
+		}
+		&-b {
+			justify-content: space-between;
+		}
+		&-s {
+			justify-content: flex-start;
+		}
+		&-e {
+			justify-content: flex-end;
+		}
+	}
+	.aimd {
+		&-c {
+			align-items: center;
+		}
+		&-s {
+			align-items: flex-start;
+		}
+		&-e {
+			align-items: flex-end;
+		}
+	}
+	.fdmd {
+		&-c {
+			flex-direction: column;
+		}
+		&-cr {
+			flex-direction: column-reverse;
+		}
+		&-r {
+			flex-direction: row;
+		}
+		&-rr {
+			flex-direction: row-reverse;
+		}
+	}
+	.tmd {
+		&-l {
+			text-align: left;
+		}
+		&-r {
+			text-align: right;
+		}
+		&-c {
+			text-align: center
+		}
+		&-u {
+			text-transform: uppercase;
+		}
+		&-nw {
+			white-space: nowrap;
+		}
+	}
+}
+
+// large sizes
+@media (min-width: 992px) {
+	.dlg {
+		&-b {
+		  display: block;
+		}
+		&-n {
+		  display: none;
+		}
+		&-f {
+		  display: flex;
+		}
+	}
+	.jclg {
+		&-c {
+			justify-content: center;
+		}
+		&-a {
+			justify-content: space-around;
+		}
+		&-b {
+			justify-content: space-between;
+		}
+		&-s {
+			justify-content: flex-start;
+		}
+		&-e {
+			justify-content: flex-end;
+		}
+	}
+	.ailg {
+		&-c {
+			align-items: center;
+		}
+		&-s {
+			align-items: flex-start;
+		}
+		&-e {
+			align-items: flex-end;
+		}
+	}
+	.fdlg {
+		&-c {
+			flex-direction: column;
+		}
+		&-cr {
+			flex-direction: column-reverse;
+		}
+		&-r {
+			flex-direction: row;
+		}
+		&-rr {
+			flex-direction: row-reverse;
+		}
+	}
+	.tlg {
+		&-l {
+			text-align: left;
+		}
+		&-r {
+			text-align: right;
+		}
+		&-c {
+			text-align: center
+		}
+		&-u {
+			text-transform: uppercase;
+		}
+		&-nw {
+			white-space: nowrap;
+		}
+	}
+}
+
+// x-large sizes
+@media (min-width: 1200px) {
+	.dxl {
+		&-b {
+		  display: block;
+		}
+		&-n {
+		  display: none;
+		}
+		&-f {
+		  display: flex;
+		}
+	}
+	.jcxl {
+		&-c {
+			justify-content: center;
+		}
+		&-a {
+			justify-content: space-around;
+		}
+		&-b {
+			justify-content: space-between;
+		}
+		&-s {
+			justify-content: flex-start;
+		}
+		&-e {
+			justify-content: flex-end;
+		}
+	}
+	.aixl {
+		&-c {
+			align-items: center;
+		}
+		&-s {
+			align-items: flex-start;
+		}
+		&-e {
+			align-items: flex-end;
+		}
+	}
+	.fdxl {
+		&-c {
+			flex-direction: column;
+		}
+		&-cr {
+			flex-direction: column-reverse;
+		}
+		&-r {
+			flex-direction: row;
+		}
+		&-rr {
+			flex-direction: row-reverse;
+		}
+	}
+	.txl {
+		&-l {
+			text-align: left;
+		}
+		&-r {
+			text-align: right;
+		}
+		&-c {
+			text-align: center
+		}
+		&-u {
+			text-transform: uppercase;
+		}
+		&-nw {
+			white-space: nowrap;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.fwmd {
+		&-nw {
+			flex-wrap: nowrap !important;
+		}
+		&-w {
+			flex-wrap: wrap !important;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.fwlg {
+		&-nw {
+			flex-wrap: nowrap !important;
+		}
+		&-w {
+			flex-wrap: wrap !important;
+		}
+	}
+}

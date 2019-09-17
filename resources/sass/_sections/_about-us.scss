@@ -1,0 +1,34 @@
+//.about-us {
+//  & .about-us_email-txt {
+//    font-size: 1.5rem;
+//    font-weight: 300;
+//    color: #29170f;
+//    line-height: 1;
+//  }
+//  & .about-us_email {
+//
+//    & .email-input {
+//      border: 2px solid red;
+//      width: 350px;
+//      padding: 5px 10px;
+//      color: #000;
+//      font-family: 'Montserrat-Medium';
+//      &::-webkit-input-placeholder {
+//        color: #000;
+//        font-family: 'Montserrat-Medium';
+//      }
+//    }
+//  }
+//}
+.about-txt {
+  & a,
+  & a:hover {
+    color: #29170F;
+    font-size: 1rem;
+      font-family: 'Montserrat-Medium';
+  }
+  & h2 {
+      font-family: 'Montserrat-Medium';
+    font-size: 2rem;
+  }
+}

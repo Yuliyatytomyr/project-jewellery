@@ -1,0 +1,33 @@
+#modal-mobile-busket,#modal-mobile-menu{
+  .modal-content {
+    border-radius: 0rem !important;
+    border: none!important;
+  }
+  .modal-backdrop {
+    background-color: #0000 !important;
+  }
+}
+@media (max-width: 575px){
+  #modal-mobile-busket,#modal-mobile-menu{
+    top: 55px!important;
+    .modal-dialog {
+      height: 100%!important;
+    }
+  }
+  .modal-backdrop {
+    top: 55px!important;
+  }
+}
+@media (min-width: 576px){
+  #modal-mobile-busket,#modal-mobile-menu{
+    top: 68.5px!important;
+  }
+}
+@media(min-width: 576px) and (max-width: 991px){
+  .modal-backdrop {
+    top: 69px!important;
+  }
+}
+.modal.fade .modal-dialog {
+  transform: translate(0,0)!important;
+}

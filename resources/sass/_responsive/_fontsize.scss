@@ -1,0 +1,45 @@
+@media (max-width: 576px){
+  a{
+    font-size: 13px!important;
+  }
+}
+@media (max-width: 767px){
+  .mob-sizeLink{
+    font-size: 0.9rem!important;
+  }
+  p{
+    font-size: 13px!important;
+  }
+  h3, .h3 {
+    font-size: 1.2rem!important;
+  }
+  h4, .h4 {
+    font-size: 1rem!important;
+  }
+  h5, .h5 {
+    font-size: 0.9rem!important;
+  }
+  a {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 992px){
+
+}
+@media (min-width: 992px){
+  .about-txt {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 767px){
+  h3{
+    font-weight: 500;
+    font-size: 1.5rem!important;
+  }
+}
+@media(min-width: 576px)and(max-width: 992px) {
+
+}
+@media (min-width: 1200px){
+
+}

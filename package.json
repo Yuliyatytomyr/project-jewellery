@@ -1,0 +1,49 @@
+{
+  "private": true,
+  "scripts": {
+    "dev-all": "concurrently \"npm --section=backoffice run dev\" \"npm --section=customers run dev\"  --kill-others-on-fail",
+    "dev": "npm run development",
+    "dev-a": "npm --section=backoffice run development",
+    "dev-c": "npm --section=customers run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "watch-a": "npm --section=backoffice run development -- --watch",
+    "watch-poll-a": "npm run watch-a -- --watch-poll",
+    "watch-c": "npm --section=customers run development -- --watch",
+    "watch-poll-c": "npm run watch-c -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "axios": "^0.18",
+    "bootstrap": "^4.1.0",
+    "bootstrap-multiselect": "^0.9.13-1",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.1",
+    "dropzone": "^5.5.1",
+    "inputmask": "^4.0.8",
+    "jquery": "^3.2",
+    "jquery-ui": "^1.12.1",
+    "laravel-mix": "^4.0.7",
+    "laravel-mix-merge-manifest": "^0.1.2",
+    "lodash": "^4.17.5",
+    "perfect-scrollbar": "^1.4.0",
+    "popper.js": "^1.12",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "summernote": "^0.8.12",
+    "toastr": "^2.1.4"
+  },
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "inputmask": "^4.0.8",
+    "swiper": "^4.5.0",
+    "toastr": "^2.1.4",
+    "vue-chartjs": "^3.4.2"
+  }
+}

@@ -1,0 +1,84 @@
+@media (max-width: 767px){
+  .popular-promotions .tabs .tab-list a {
+    font-family: "Montserrat";
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 5px;
+  }
+  .sliderMob-img{
+    width:600px !important;
+    height:400px !important;
+  }
+}
+@media (min-width: 768px) {
+  .sliderMob-img{
+    width: 850px !important;
+    height: 650px !important;
+  }
+}
+@media (min-width: 576px)and(max-width: 991px){
+  .navMob{
+    .logo img {
+      width: 200px;
+    }
+    .search-icon {
+       width: 25px;
+    }
+    svg {
+      width: 27px;
+      stroke: #fff;
+      fill: transparent;
+    }
+    .basket-prod svg {
+      width: 30px;
+    }
+    .amountIconHead {
+      font-size: 17px;
+      right: -13px;
+      bottom: -3px;
+    }
+  }
+  .menu-toggle {
+    width: 38px;
+    top: 40%;
+    span:nth-child(2),span:nth-child(3){
+      top: 10px;
+      width: 75%;
+    }
+    span:nth-child(4){
+      top: 20px;
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 991px){
+  .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0px 8px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .articleAboutus{
+    text-align: center;
+  }
+  .iconFoot-mob{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 992px){
+  .logo-block {
+    margin: 1rem 0 2.5rem 0;
+  }
+  .blog-pagination>.swiper-pagination-bullet{
+    width: 12px!important;
+    height: 12px!important;
+    margin: 0 8px!important;
+  }
+  .about-us {
+    border: 1px solid #333435;
+  }
+}

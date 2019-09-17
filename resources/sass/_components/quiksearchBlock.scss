@@ -1,0 +1,86 @@
+.card-static_imgSearch {
+  width: 75px;
+  height: 80px;
+}
+.card-search_btn {
+  background: #000;
+  padding: 4px 8px 4px;
+  width: 57%;
+
+  a {
+    color: white;
+    font-size: 14px;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+.articleSearchProduct {
+  font-size: 12px;
+}
+.card-search_sale {
+  line-height: 16px;
+  width: 35px;
+  background: #ff2121;
+  text-align: center;
+  font-size: 0.6rem;
+  color: white;
+  position: absolute;
+  border-radius: 4px;
+}
+.card-search_sale-price {
+  text-decoration: line-through;
+  font-size: 0.8rem;
+}
+.card-search_price {
+  font-size: 1rem;
+  font-family: "Montserrat-Medium";
+}
+.hideSearchBlock {
+  display: none;
+}
+@media (min-width: 993px) {
+  .quick-search-block {
+    position: absolute;
+    z-index: 1500;
+    bottom: -50px;
+    left: 445px;
+    width: 880px;
+    overflow: auto;
+    transform: translate(-50%, 100%);
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 0 5px 0 #e9ebf1;
+  }
+  .search-category-item {
+    color: $grey;
+
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .quick-search-block {
+    position: absolute;
+    z-index: 2500;
+    top: 92px;
+    height: 500px;
+    heigth: 500px;
+    width: 100%;
+    border: 1px solid;
+    overflow: auto;
+    background-color: #fff;
+    padding: 15px 30px;
+  }
+  .search-category-item {
+    color: $grey;
+    margin: 7px;
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}

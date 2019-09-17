@@ -1,0 +1,128 @@
+.delivery-store {
+  &_border-block {
+    height: 375px;
+  }
+  &_packaging {
+    border: 1px solid $grey;
+    font-size: 1rem;
+    color: #000;
+    font-family: 'Montserrat-Medium';
+  }
+  &_border-block{
+    height: 100%;
+  }
+  &_ways {
+    font-family: 'Montserrat-Medium';
+    font-size: 0.9rem;
+    & img {
+      width: 35px;
+    }
+    &-txt {
+      font-size: 1.1rem;
+    }
+    & .span-note {
+      font-size: 0.7rem;
+    }
+    &-list {
+      line-height: 2;
+      font-size: 0.9rem;
+    }
+  }
+  & a {
+    font-size: 0.9rem;
+    color: #000;
+    border-bottom: 1px solid $grey;
+  }
+  & a:hover {
+    color: #000;
+    border-bottom: 1px solid $grey;
+  }
+
+   &_content {
+     font-family: 'Montserrat';
+     &-txt {
+       font-size: 0.95rem;
+     }
+   }
+  & .product-info {
+    font-family: 'Montserrat';
+    color: #000;
+    font-size: 1.1rem;
+    &_name {
+      color: #5e5e5e;
+    }
+  }
+  & .all-specifications {
+    font-family: 'Montserrat';
+    color: #000;
+    font-size: 1.1rem;
+    & svg {
+      width: 18px;
+    }
+  }
+}
+.product_like{
+  width: 25px;
+  fill: #b2b2b2;
+  &:hover{
+    fill:black;
+  }
+}
+.slider-block {
+  & h2 {
+    font-family: 'Montserrat-Medium';
+  }
+}
+#size-select_label{
+  list-style: none;
+  li{
+    display: inline-block;
+  }
+}
+.thumb-active{
+  border: 1px solid black;
+}
+
+@media (max-width: 767px) {
+  .card-store .card-store_img .card-store_img-main img {
+    width: 250px;
+    height: 250px;
+  }
+  .card-store_img{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .card-store_img-prev{
+    justify-content: center;
+    flex-direction: row;
+  }
+  .submitProductBlock{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .product_likeBlock{
+    border-bottom: 1px solid;
+    width: 100%;
+  }
+  .delivery-store{
+    &_content{
+      order:1;
+    }
+    &_border-block{
+      order:2;
+    }
+    &_content-txt {
+      font-size: 1rem;
+    }
+    .product-info {
+      font-size: 0.9rem;
+    }
+    .all-specifications {
+      font-size: 1rem;
+    }
+  }
+}
+@media (max-width: 992px){
+
+}

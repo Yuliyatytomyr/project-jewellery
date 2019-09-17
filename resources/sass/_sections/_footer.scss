@@ -1,0 +1,30 @@
+.footer-block {
+  &_top {
+    background: #000;
+  }
+  & li a {
+    font-size: 0.95rem;
+  }
+  & li a:hover {
+    color: #ffffff;
+    border-bottom: 1px solid;
+  }
+}
+.footer {
+  &-logo {
+    max-width: 100%;
+    width: 160px;
+  }
+  &-font {
+    &_b {
+      font-size: 1.1rem;
+    }
+    &_m {
+      font-size: 1rem;
+    }
+  }
+}
+
+.soc-net_insta {
+  width: 30px;
+}

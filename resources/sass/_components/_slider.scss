@@ -1,0 +1,99 @@
+.block-slider {
+  height: 500px;
+}
+.slider-container {
+  margin-left: 19%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+}
+.swiper-container.swiper-container_similar,
+.swiper-container.swiper-container_prev {
+  margin-top: 0 !important;
+}
+.slider-home {
+  width: 100%;
+  height: 480px;
+  max-height: 106vh;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-card_height {
+  height: 475px !important;
+}
+.btn-slider-right, .btn-slider-left{
+  background: #f8fafc12;
+  height: 35px;
+  & i {
+    color: $grey;
+    top: 50%;
+    position: absolute;
+    transform: translate(30%, -50%);
+    font-size: 1.5rem;
+  }
+}
+.btn-slider-right {
+  right: 0px;
+}
+.btn-slider-left {
+  left: 0px;
+}
+.btn-slider-black_right,
+.btn-slider-black_left {
+  background-image: url("../../assets/images/rightarrow.png");
+  background-size: 15px;
+
+}
+.btn-slider-black_right {
+  right: -10px;
+  transform: rotate(180deg);
+}
+.btn-slider-black_left {
+  left: -10px;
+}
+.viewed-container {
+  position: static;
+}
+
+.swiper-pagination-bullet-active {
+  background: $grey !important;
+}
+
+
+//FansyBox
+.fancybox-content {
+  width: 500px !important;
+  height: 500px !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+.fancybox-image {
+  width: 500px !important;
+  height: 500px !important;
+}
+.fancybox-button--arrow_right {
+  right: -256px !important;
+}
+.fancybox-button--arrow_left {
+  left: -256px !important;
+}
+.fancybox-navigation {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+}
+
+@media (max-width: 1200px) {
+  .swiper-container {
+    height: 76%;
+  }
+}

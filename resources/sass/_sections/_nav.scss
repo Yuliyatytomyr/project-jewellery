@@ -1,0 +1,126 @@
+nav {
+    background: #000;
+
+    & .menu_link {
+        color: #ffffff;
+        font-size: 0.8rem;
+    }
+
+    & .menu_link:hover {
+        color: #ffffff;
+        border-bottom: 1px solid;
+    }
+    & .text-logo {
+        font-size: 4rem;
+        color: #ffffff;
+        text-align: center;
+    }
+    .logo {
+        & img {
+            width: 200px;
+        }
+        &-link {
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+            display: block;
+            margin: auto;
+            width: 215px;
+        }
+
+        &-list_header {
+            top: -10px;
+            right: 0%;
+        }
+    }
+    .nav {
+        &-link {
+            padding: 0;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+        &-img {
+            & img {
+                width: 24px;
+                height: auto;
+                display: block;
+                float: left;
+                max-width: 50%;
+            }
+        }
+        &-prod {
+            position: relative;
+            padding: 0;
+            background: #fff;
+        }
+    }
+    .nav-link:hover {
+        background: #fff;
+        color: $grey;
+    }
+    .nav-link:focus {
+        background: #fff;
+        color: $grey;
+    }
+    & .basket-prod_name{
+        top: 40px;
+        right: 0;
+        font-size: 0.4rem;
+    }
+}
+.header-nav-right {
+    a:focus,
+    a:hover {
+        //font-weight: 600;
+        color: $grey;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        width: auto;
+    }
+}
+
+.h-line_w {
+    border-bottom: 1px solid transparent;
+}
+.h-line_w:hover {
+    border-bottom: 1px solid #fff;
+}
+.header__top-item-tip {
+    position: absolute;
+    color: #222;
+    width: 230px;
+    top: 87%;
+    right: 0;
+    z-index: 10000;
+    padding: 10px;
+    background: #fff;
+    text-shadow: none;
+    text-align: left;
+    display: none;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    font-size: .8rem;
+}
+.menu_link:hover .header__top-item-tip {
+    display: block;
+}
+.header__top-item-tip-link {
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+}
+.header__top-item-tip-link:hover {
+    border-bottom: 1px solid;
+}
+.geoposition {
+    font-size: 0.8rem;
+}
+.header__top-item-icon {
+    height: 32px;
+    width: 28px !important;
+}
+.truck-icon {
+    width: 25px;
+    height: 22px;
+    margin-bottom: 3px;
+}
+

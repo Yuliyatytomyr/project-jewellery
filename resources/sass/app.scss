@@ -1,0 +1,148 @@
+// Variables
+@import 'variables';
+
+@import "_common/sizes",
+"_common/classes",
+"_common/colors",
+"_common/media",
+
+"_components/select2",
+"_components/button",
+"_components/checkbox",
+"_components/inputs",
+"_components/tooltip",
+"_components/menu",
+"_components/search",
+"_components/select-box",
+"_components/modal-log",
+"_components/slider",
+"_components/preloader",
+"_components/popular-promotions",
+"_components/tab",
+"_components/card-store",
+"_components/size-select",
+"_components/rating",
+"_components/cards-catalog",
+"_components/blog-slider",
+"_components/mobsiteMenu",
+"_components/quiksearchBlock",
+"_components/pagination-catalog",
+"_components/header-fixedDesk",
+"_components/borderBlocks",
+"_components/modals-navMob",
+
+"_responsive/responsive",
+"_responsive/fontsize",
+"_responsive/mobCards",
+"_responsive/desktopCards",
+
+"_sections/nav",
+"_sections/main",
+"_sections/footer",
+"_sections/footerMob",
+"_sections/about-us",
+"_sections/profile",
+"_sections/product",
+"_sections/gallary",
+"_sections/blogNews",
+"_sections/bucket";
+
+// Font Awesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+@import '~swiper/dist/css/swiper.min.css';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// toastr
+@import '~toastr/toastr';
+
+//Fonts
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('/fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-LightItalic';
+  src: url('/fonts/Montserrat/Montserrat-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('/fonts/Montserrat/Montserrat-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('/fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  //font-family: 'HelveticaNeueCyr-Light';
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  background: #fff;
+  user-select: none;
+}
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  //padding: 0 !important;
+  //margin: 0 !important;
+}
+#app{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.container{
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+.product_like,.card-hover_like,.card-hover_nolike{
+  cursor: pointer;
+}
+footer{
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+footer li, nav li{
+  display: inline-block;
+}
+footer ul, nav ul{
+  list-style: none;
+}
+
+// datapicker
+@import '~jquery-ui/themes/base/all.css';
+
+//fancybox
+@import '~@fancyapps/fancybox/dist/jquery.fancybox';

@@ -1,0 +1,254 @@
+.float_top_menu{
+  .logo {
+    & img {
+      width: 165px;
+    }
+    &-link {
+      top: -10px;
+      text-align: center;
+      display: block;
+      margin: auto;
+      left: -27px;
+      transform: translate(0);
+    }
+  }
+  .menu {
+    z-index: 1000;
+    padding: 0;
+    &-txt {
+      right: 88%;
+      top: 25%;
+      font-size: 1.1rem;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+      right: -92px;
+      top: -11%;
+    }
+  }
+  .favorit-prod {
+    & a {
+      width: 23px;
+      height: 32px;
+    }
+    & svg {
+      width: 30px;
+      fill: transparent;
+      stroke: #fff;
+    }
+    & svg:hover {
+      fill: #fff;
+    }
+  }
+  .basket-prod {
+    & a {
+      width: 23px;
+      height: 32px;
+    }
+    & svg {
+      width: 27px;
+      height: 33px;
+      fill: transparent;
+      stroke: #fff;
+      stroke-width: 1px;
+      transform: scale(1.2);
+    }
+    & svg:hover {
+      fill: #fff;
+    }
+  }
+  .header-nav-right_log.open {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .header-nav-right_log-hide.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    right: 0;
+    position: absolute;
+    top: 100%;
+    padding: 0 5px 5px 5px;
+    width: 100%;
+    cursor: pointer;
+    & a {
+      color: $grey;
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  .header-block_navigation {
+    & a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: $grey;
+      text-decoration-skip-ink: none;
+    }
+  }
+  .header-block_navigation-cont {
+    & li {
+      font-size: 1.3rem;
+      & a {
+        color: $grey;
+      }
+    }
+  }
+
+  .header-block_navigation-cont {
+    display: block;
+  }
+
+  .header-block_navigation-cont.open-dinamic {
+    display: none;
+    position: absolute;
+  }
+  //mega menu
+  .mega-menu:hover{
+    width: 100% !important;
+  }
+  .mega-menu {
+    top: 48px;
+    float: left;
+    position: relative;
+    margin: auto;
+    transition: all 0.33s;
+    padding: 0;
+    > ul {
+      width: 100%;
+      position: relative;
+      background-color: #fff;
+      display: block;
+      position: relative;
+      z-index: 10;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      padding: 0 5px;
+
+      &:hover {
+        background: #fff;
+        z-index: 1;
+      }
+      > li {
+        display: block;
+        width: 100%;
+        padding: 11px 0;
+        > a {
+          color: $grey;
+          width: 100%;
+          display: block;
+          overflow: hidden;
+          position: relative;
+          font-size: 0.98rem;
+          font-weight: 500;
+          line-height: 1;
+          text-decoration: none !important;
+          border: 1px solid transparent;
+          width: fit-content;
+        }
+        &:first-child {
+          padding-top: 14px;
+        }
+        .mega-submenu {
+          width: 0;
+          visibility: hidden;
+          position: absolute;
+          transition: width 0.33s;
+          display: none;
+        }
+        &:hover .mega-submenu {
+          display: block;
+          top: 0;
+          right: 0;
+          z-index: 99;
+          overflow: hidden;
+          visibility: visible;
+          width: calc(100% - 215px);
+          height: 100%;
+        }
+        &:hover .menu_link.active {
+          font-weight: 600;
+          border-bottom: 1px solid;
+        }
+        & .menu_link:hover {
+          color: $grey;
+          font-weight: 600;
+          border-bottom: 1px solid;
+        }
+      }
+    }
+  }
+  .mega-submenu {
+    .submenu-content {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+  .menu_item {
+    width: fit-content;
+    cursor: pointer;
+    & svg {
+      width: 16px;
+      stroke: #fff;
+    }
+    .section {
+      width: 100%;
+      float: left;
+      padding: 0 15px;
+      position: relative;
+    }
+    .links {
+      padding-top: 15px;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          display: block;
+          margin: 10px 0;
+          background: #fff;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+          a {
+            color: $grey;
+            display: flex;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid $grey;
+            height: 65px;
+
+            & img {
+              width: 40px;
+              max-width: 100%;
+              margin-right: 5px;
+            }
+          }
+          a:hover {
+            background: #49505736;
+            border: 1px solid #49505736;
+          }
+        }
+      }
+    }
+  }
+}
+.header-fixed{
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .header-fixedDesk {
+    position: fixed;
+    z-index: 1700;
+    width: 100%;
+    display: block;
+    top: 0;
+  }
+}

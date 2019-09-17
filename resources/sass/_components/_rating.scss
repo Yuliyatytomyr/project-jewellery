@@ -1,0 +1,28 @@
+.rating {
+  transition: .4s;
+
+  //&:hover {
+  //  box-shadow: $box-shadow-hovered;
+  //}
+  & label {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &-svg {
+    width: 100%;
+  }
+}
+
+.stars {
+  max-width: 100px;
+
+  & polygon {
+    transition: .2s ease-in-out;
+  }
+
+  & .star.hover polygon,
+  & .star.active polygon {
+    fill: #caae6c;
+  }
+}

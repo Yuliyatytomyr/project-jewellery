@@ -1,0 +1,29 @@
+$grey: #333435;
+
+$red: #ff2121;
+
+$brown: #29170f;
+
+$orange: #ff8a00;
+
+$yellow:  #ffe400;
+$dark-yellow: #e4b95d;
+
+$green: #0eb144;
+
+$white: #ffffff;
+.b-line {
+  border: 1px solid $grey;
+}
+.bg-g {
+  background: $grey !important;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.c-red{
+  color:#ff2121;
+}
+.b-c_g {
+  border-color: $grey !important;
+}
