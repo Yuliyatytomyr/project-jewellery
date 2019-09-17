@@ -32,9 +32,9 @@
                 <span>{{$gproduct->getNameTran()}}</span>
             </div>
             <div class="d-b dlg-n">
-                <?
+                @php
                 $first_product = $gproduct->productsNew->first();
-                ?>
+                @endphp
                 <div class="card-static_price mt-5">{{ $first_product->total_sum }} <span class="">грн</span></div>
                 <div class="d-f ai-c jc-c mb-1">
                     <div class="card-static_sale-price">
@@ -48,9 +48,9 @@
                 </div>
             </div>
             <div class="d-n dlg-b">
-                <?
+                @php
                 $first_product = $gproduct->productsNew->first();
-                ?>
+                @endphp
                 <div class="salePrice_block d-f ai-c jc-c mt-1 mb-1">
                     <div class="card-static_sale-price">
                         {{ $first_product->g_price }} <span class="">грн</span>

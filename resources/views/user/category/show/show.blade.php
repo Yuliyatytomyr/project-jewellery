@@ -1,11 +1,7 @@
 @extends('user.app.app')
 
 @section('content')
-    <?
-        if(isset($remove_pvalues)){
-            $array_pvalues_rem = $remove_pvalues->pluck('id')->toArray();
-        }
-    ?>
+    @php if(isset($remove_pvalues)) $array_pvalues_rem = $remove_pvalues->pluck('id')->toArray(); @endphp
 
     <div class="row mt-2">
         {{-- хлебные крошки --}}
@@ -26,10 +22,10 @@
                 <div class="row">
                     <div class="col-12">
                         @foreach($remove_pvalues as $remove_pvalue)
-                            <?
+                            @php
                             $array_pvalues_rem_without = array_diff($array_pvalues_rem, [$remove_pvalue->id]);
                             $new_gpvalues_param = implode(',', $array_pvalues_rem_without);
-                            ?>
+                            @endphp
                             <div class="filter-tags__item m-2">
                                 <p class="name-filter m-0 mr-2">{{ $remove_pvalue->getNameTran() }}</p>
                                 <a href="{{ asset(app()->getLocale().'/categories/'.$category->alias.'?gpvalues='.$new_gpvalues_param) }}" class="del-filter" rel="nofollow">
