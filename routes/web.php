@@ -6,6 +6,8 @@
 Route::redirect('/', '/'.app()->getLocale(), 301);
 Route::redirect('administration', app()->getLocale().'/administration', 301);
 
+Route::post('mailing-subscribe', 'MailingFromSiteController@subscribe');
+Route::delete('mailing-unsubscribe', 'MailingFromSiteController@unsubscribe');
 
 Route::get('mail', function () {
     $invoice = \App\User::find(1);
