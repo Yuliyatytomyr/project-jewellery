@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="516220a0-9596-430d-b1fc-b0a4cf0afb7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_components/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_components/_menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_sections/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_sections/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/app/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/app/layouts/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/category/show/layouts/sidebar_filter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/category/show/layouts/sidebar_filter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/favorites/index/layouts/new_product_card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/favorites/index/layouts/new_product_card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/product/show/layouts/sizes_block.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/product/show/layouts/sizes_block.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/product/show/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/product/show/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +167,7 @@
       <updated>1568702032583</updated>
       <workItem from="1568702033813" duration="4103000" />
       <workItem from="1568719599313" duration="1466000" />
-      <workItem from="1568908062782" duration="7917000" />
+      <workItem from="1568908062782" duration="8448000" />
     </task>
     <servers />
   </component>
