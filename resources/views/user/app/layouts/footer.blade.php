@@ -245,19 +245,20 @@
         <div class="row">
             <div class="col-12 d-f ai-c jc-b fd-r">
                 <a class="" href="#">
-                    <img class="w-8p m-2" src="{{ asset('img/svg/np.svg') }}">
+                    <img class="w-8p ml-3" src="{{ asset('img/svg/np.svg') }}">
                 </a>
                 <a class="" href="#">
-                    <img class="w-8p m-2" src="{{ asset('img/svg/pb.svg') }}">
+                    <img class="w-8p ml-3" src="{{ asset('img/svg/pb.svg') }}">
                 </a>
                 <a class="" href="#">
-                    <img class="w-8p m-2" src="{{ asset('img/svg/visa.svg') }}">
+                    <img class="w-8p ml-3" src="{{ asset('img/svg/visa.svg') }}">
                 </a>
                 <a class="" href="#">
-                    <img class="w-8p m-2" src="{{ asset('img/svg/mc.svg') }}">
+                    <img class="w-8p ml-3" src="{{ asset('img/svg/mc.svg') }}">
                 </a>
                 <a class="" href="#">
-                    <img class="w-8p m-2" src="{{ asset('img/svg/lqp.svg') }}">
+                    <img class="w-65p ml-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Fondy_logo.svg/206px-Fondy_logo.svg.png">
+{{--                    <img class="w-8p m-2" src="{{ asset('img/svg/lqp.svg') }}">--}}
                 </a>
             </div>
         </div>
@@ -296,7 +297,8 @@
                 </div>
                 <div class="d-f ai-c jc-s iconFoot-mob">
                     <a class="pl-2 pr-2" href="#">
-                        <img src="{{ asset('img/svg/lqp.svg') }}">
+                        <img class="w-65p" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Fondy_logo.svg/206px-Fondy_logo.svg.png">
+{{--                        <img src="{{ asset('img/svg/lqp.svg') }}">--}}
                     </a>
                 </div>
             </div>

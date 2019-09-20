@@ -1,7 +1,7 @@
 @if($gproduct->category->size_array != null)
     @php
         $array_cat_sizes = json_decode($gproduct->category->size_array);
-    @endphp;
+    @endphp
     <div class="size-select_txt mt-3 mb-2">
         Размеры
     </div>
