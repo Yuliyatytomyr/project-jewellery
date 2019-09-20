@@ -1,0 +1,46 @@
+.nav-Mobprod {
+    line-height: 47px;
+    list-style: none;
+    .menu_itemMob{
+        text-transform: uppercase;
+        margin: 0;
+        padding: 6px 0;
+        border-bottom: 1px solid #00000017;
+        width: 100%;
+        svg{
+            width: 19px;
+            transform: rotate(-90deg);
+            margin-bottom: 3px;
+        }
+        a{
+            color: black;
+        }
+    }
+    .submenu-content{
+        display: flex;
+        flex-direction: column;
+        .links{
+            width: 100%;
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    margin: 0;
+                    padding: 6px 0;
+                    border-bottom: 1px solid #00000017;
+                    width: 100%;
+                    img{
+                        width: 65px;
+                        height: 60px;
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+.itemMob-active{
+    transform: rotate(90deg)!important;
+    transition: 0.3s;
+}
+

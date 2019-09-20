@@ -78,6 +78,9 @@
     & a {
       color: $grey;
       border-bottom: 1px solid transparent;
+        &:hover{
+            color: #000;
+        }
     }
   }
 
