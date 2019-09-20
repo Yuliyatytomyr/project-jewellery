@@ -71,12 +71,14 @@
     & a {
       color: $grey;
       border-bottom: 1px solid transparent;
+        &:hover{
+            color: #000;
+        }
     }
   }
-
   .header-block_navigation {
     & a:hover {
-      color:black;
+      color:#fff;
       text-decoration: underline;
       text-decoration-color: $grey;
       text-decoration-skip-ink: none;
