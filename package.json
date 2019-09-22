@@ -23,7 +23,7 @@
     "bootstrap": "^4.1.0",
     "bootstrap-multiselect": "^0.9.13-1",
     "concurrently": "^4.1.1",
-    "cross-env": "^5.1",
+    "cross-env": "^5.2.1",
     "dropzone": "^5.5.1",
     "inputmask": "^4.0.8",
     "jquery": "^3.2",
@@ -37,7 +37,8 @@
     "sass": "^1.15.2",
     "sass-loader": "^7.1.0",
     "summernote": "^0.8.12",
-    "toastr": "^2.1.4"
+    "toastr": "^2.1.4",
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
     "chart.js": "^2.8.0",

@@ -57,7 +57,6 @@
     flex-direction: column;
     cursor: pointer;
   }
-
   .header-nav-right_log-hide.open {
     display: flex;
     flex-direction: column;
@@ -72,12 +71,14 @@
     & a {
       color: $grey;
       border-bottom: 1px solid transparent;
+        &:hover{
+            color: #000;
+        }
     }
   }
-
   .header-block_navigation {
     & a:hover {
-      color: #fff;
+      color:#fff;
       text-decoration: underline;
       text-decoration-color: $grey;
       text-decoration-skip-ink: none;

@@ -274,14 +274,8 @@
                     </div>
                 </li>
             @endif
-
         @empty
         @endforelse
-
-
-
-
-
     </ul>
 </div>
 </div>

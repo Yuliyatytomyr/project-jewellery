@@ -35,6 +35,7 @@
 "_responsive/fontsize",
 "_responsive/mobCards",
 "_responsive/desktopCards",
+"_responsive/navMob",
 
 "_sections/nav",
 "_sections/main",
@@ -117,7 +118,7 @@ html {
   flex-shrink: 0;
   flex-basis: auto;
 }
-.product_like,.card-hover_like,.card-hover_nolike{
+.product_like,.card-hover_like,.card-hover_nolike, menu-toggle-cross{
   cursor: pointer;
 }
 footer{
