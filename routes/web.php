@@ -6,8 +6,32 @@
 Route::redirect('/', '/'.app()->getLocale(), 301);
 Route::redirect('administration', app()->getLocale().'/administration', 301);
 
-Route::post('mailing-subscribe', 'MailingFromSiteController@subscribe');
-Route::delete('mailing-unsubscribe', 'MailingFromSiteController@unsubscribe');
+/////////////////////////////////////////////////////////////////////////////////////
+// Route::post('mailing-subscribe', 'MailingFromSiteController@subscribe');
+// Route::delete('mailing-unsubscribe', 'MailingFromSiteController@unsubscribe');
+Route::group(['prefix' => 'mailing'], function(){
+    Route::post('/subscribe', 'MailingFromSiteController@subscribe');
+    Route::delete('/unsubscribe', 'MailingFromSiteController@unsubscribe');
+});
+Route::group(['prefix' => 'payment'], function(){
+    Route::post('/', 'Payment\PaymentController@payment');
+});
+Route::group(['prefix' => 'gproducts'], function(){
+    Route::get('/show', function(){
+        return view('administration.admin.gproduct.index');
+    });
+    Route::get('/show/{gproduct}', function(){
+        return view('administration.admin.gproduct.show');
+    });
+    Route::get('/create', function(){
+        return view('administration.admin.gproduct.create');
+    });
+    Route::get('/edit/{gproduct}', function(){
+        return view('administration.admin.gproduct.edit');
+    });
+    // Route::put('/product/{gproduct}', 'GproductController@updateProduct');
+});
+/////////////////////////////////////////////////////////////////////////////////////
 
 Route::get('mail', function () {
     $invoice = \App\User::find(1);

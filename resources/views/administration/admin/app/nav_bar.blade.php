@@ -24,7 +24,7 @@
                         <span class="profile-text font-weight-medium d-none d-md-block">Рус</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
-                        <a class="dropdown-item" href="{{ asset('ua/'.\App\Models\StaticFunctions\SF:: getPartUrlForLocalButtons(Request::path())) }}">
+                        <a class="dropdown-item" href="{{ asset('ua/'.\App\Models\StaticFunctions\SF:: getPartUrlForLocalButtons(Request::path(), Request::all() )) }}">
                             <div class="flag-icon-holder">
                                 <i class="flag-icon flag-icon-ua"></i>
                             </div> Укр
@@ -40,7 +40,7 @@
                         <span class="profile-text font-weight-medium d-none d-md-block">Укр</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
-                        <a class="dropdown-item" href="{{ asset('ru/'.\App\Models\StaticFunctions\SF:: getPartUrlForLocalButtons(Request::path())) }}">
+                        <a class="dropdown-item" href="{{ asset('ru/'.\App\Models\StaticFunctions\SF:: getPartUrlForLocalButtons(Request::path(), Request::all() )) }}">
                             <div class="flag-icon-holder">
                                 <i class="flag-icon flag-icon-ru"></i>
                             </div> Рус

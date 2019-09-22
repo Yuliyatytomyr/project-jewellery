@@ -21,6 +21,7 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '/dropzone/deleteFiles',
         'mailing-subscribe',
-        'mailing-unsubscribe'
+        'mailing-unsubscribe',
+        'payment'
     ];
 }

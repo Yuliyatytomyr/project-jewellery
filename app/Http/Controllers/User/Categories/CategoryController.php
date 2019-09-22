@@ -86,4 +86,10 @@ class CategoryController extends Controller
 
         return [$array_with_count, $array_ids_pvalues];
     }
+
+    public function getCategories(){
+        $categories = Category::all('id', 'alias', 'name_ru', 'name_ua');
+
+        return $categories;
+    }
 }

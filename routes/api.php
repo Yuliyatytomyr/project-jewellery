@@ -16,3 +16,17 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('categories', 'User\Categories\CategoryController@getCategories');
+Route::get('subcategories', 'User\Subcategories\SubcategoryController@getSubcategories');
+
+Route::group(['prefix' => 'gproducts'], function(){
+    Route::get('/categories/{category}', 'GproductController@getByCategory');
+    Route::get('/subcategories/{subcategory}', 'GproductController@getBySubcategory');
+    Route::get('/', 'GproductController@index');
+    Route::get('/{gproduct}', 'GproductController@show');
+    Route::post('/', 'GproductController@store');
+    Route::put('/{gproduct}', 'GproductController@updateGproduct');
+    // Route::put('/{gproduct}/product', 'GproductController@updateProduct');
+    Route::post('/photo/{gproduct}', 'GproductController@updateGproductPhoto');
+});

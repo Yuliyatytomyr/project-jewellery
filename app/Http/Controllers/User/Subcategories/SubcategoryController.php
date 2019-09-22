@@ -13,6 +13,13 @@ use App\Models\Pvalue;
 
 class SubcategoryController extends Controller
 {
+
+    public function getSubcategories(){
+            $subCategories = Subcategory::all('id', 'alias', 'name_ru', 'name_ua');
+    
+            return $subCategories;
+    }
+
     public function show(Request $request, $locale, $alias){
 
 //                                \DB::listen(function($query){
