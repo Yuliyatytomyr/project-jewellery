@@ -26,6 +26,7 @@ Route::group(['prefix' => 'gproducts'], function(){
     Route::get('/', 'GproductController@index');
     Route::get('/{gproduct}', 'GproductController@show');
     Route::post('/', 'GproductController@store');
+    Route::delete('/{gproduct}', 'GproductController@destroy');
     Route::put('/{gproduct}', 'GproductController@updateGproduct');
     // Route::put('/{gproduct}/product', 'GproductController@updateProduct');
     Route::post('/photo/{gproduct}', 'GproductController@updateGproductPhoto');

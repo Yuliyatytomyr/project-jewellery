@@ -72,7 +72,7 @@ class GproductController extends Controller
             // $gproduct->category_id = $category->id;
             // $gproduct->subcategory_id = $subcategory->id;
             $gproduct->category_id = $request->input('category_id');
-            $gproduct->subcategory_id = $request->input('subcategory->id');
+            $gproduct->subcategory_id = $request->input('subcategory_id');
             $gproduct->name_ru = $request->input('name_ru');
             $gproduct->name_ua = $request->input('name_ua');
             $gproduct->desc_ru = $request->input('desc_ru');
@@ -100,6 +100,18 @@ class GproductController extends Controller
         } catch (\Throwable $th) {
             return response()->json($th, 400);
         }
+    }
+
+    public function destroy($id){
+
+        try {
+            Gproduct::find($id)->delete();
+
+            return response()->json("Deleted", 200);
+        } catch (\Throwable $th) {
+            return response()->json($th, 400);
+        }
+
     }
 
 
