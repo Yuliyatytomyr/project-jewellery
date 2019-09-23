@@ -12,9 +12,9 @@
         </div>
         <div class="card-store_img col-12 col-md-6 d-f">
             <div class="card-store_img-prev d-f fd-c mt-4 mt-md-0">
-                @foreach($gproduct->gpimages as $gpimage)
+                @foreach($gproduct->gpimages as $img_thumb => $gpimage)
                     <div class="mb-2">
-                        <img class="w-1p h-1p thumb" src="{{ asset($gpimage->image_path)}}">
+                        <img @if($img_thumb != 1) style="border: 1px solid black;" @endif class="w-1p h-1p thumb" src="{{ asset($gpimage->image_path)}}">
                     </div>
                 @endforeach
             </div>

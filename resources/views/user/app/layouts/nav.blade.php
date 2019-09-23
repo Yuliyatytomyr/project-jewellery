@@ -144,7 +144,7 @@
             </div>
 
             <div class="quick-search-block hideSearchBlock" id="quick-search-block">
-                
+
             </div>
 
             <div class="logo h-1p p-r w-1p">
@@ -202,7 +202,6 @@
                     <div class="d-f ai-c jc-e p-r">
                     @auth
                         <div class="header-nav-right d-f ai-b jc-e p-r">
-
                             <div class="contact-header header-nav-right_log cl-w t-c">
                                 <div class="d-f ai-c jc-c">
                                     <div class="mr-2 contact-header_icon">

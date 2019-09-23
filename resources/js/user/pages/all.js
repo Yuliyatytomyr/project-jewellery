@@ -171,6 +171,13 @@
             $(".menu-toggle-cross").toggleClass('d-n');
             e.stopPropagation();
         });
+
+        $('body').on('click', '#filterMob', function (e) {
+            $('#modal-mobile-filter').modal({
+                backdrop : 'static',
+                keyboard : false
+            });
+        });
         //     sub-menu(mobile)
         var menulink = $(".nav-Mobprod > li")
         $('.nav-Mobprod > li').click(function(event){

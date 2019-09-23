@@ -1,5 +1,5 @@
 <div class="container demo">
-    <div class="modal left fade" id="modal-mobile-menu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="dlg-n modal left fade" id="modal-mobile-menu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog w-100" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -271,16 +271,58 @@
             </div>
         </div>
     </div>
-    <div class="modal right fade" id="modal-mobile-busket"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="dlg-n modal right fade" id="modal-mobile-busket"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog w-100" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="nav flex-sm-column flex-row">
-                        <a class="nav-item nav-link active" href="#">Home left</a>
-                        <a href="#" class="nav-item nav-link">Link</a>
-                        <a href="#" class="nav-item nav-link">Link</a>
-                        <a href="#" class="nav-item nav-link">Link</a>
+                        @auth
+                            <div class="header-nav-right d-f ai-b jc-e p-r">
+                                <div class="contact-header header-nav-right_log t-c">
+                                    <div class="d-f ai-c jc-c">
+                                        <div class="d-f ai-c jc-c">
+                                            <div>
+                                                {{ (isset(Auth::user()->name)) ? Auth::user()->name .' '.Auth::user()->surname : Auth::user()->email }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="header-nav-right_log-hide">
+                                        <a class="" href="{{ asset(app()->getLocale().'/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            @lang('user_nav.nav9')
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout', app()->getLocale()) }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                        <a class="pl-2" href="{{ asset(app()->getLocale().'/customer/profile') }}" >
+                                            @lang('user_nav.nav10')
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <a class="h-line_w mr-2" href="#" data-toggle="modal" data-target="#login-modal-r">
+                                @lang('user_nav.nav8')
+                            </a>
+                        @endauth
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container demo">
+    <div class="dlg-n modal left fade" id="modal-mobile-filter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog w-100" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Фильтры
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
             </div>
         </div>

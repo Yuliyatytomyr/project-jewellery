@@ -1,11 +1,14 @@
 @extends('user.app.app')
 
 @section('content')
-    @php if(isset($remove_pvalues)) $array_pvalues_rem = $remove_pvalues->pluck('id')->toArray(); @endphp
-
+    @php
+        if(isset($remove_pvalues)) {
+            $array_pvalues_rem = $remove_pvalues->pluck('id')->toArray();
+        }
+    @endphp
     <div class="row mt-2">
-        {{-- хлебные крошки --}}
-        <div class="col-12">
+{{--         хлебные крошки--}}
+        <div class="col-12 breadcrumbs">
             <a href="{{ asset(app()->getLocale()) }}">Главная</a>
             <span>&nbsp;>&nbsp;</span>
             <a>{{ $category->getNameTran() }}</a>
@@ -39,6 +42,11 @@
                     </div>
                 </div>
             @endif
+            <div class="row">
+                <div class="col-12 dlg-n mb-4">
+                    <button id="filterMob" class="cl-w btn-profile mr-md-3 mr-0">Фильтр</button>
+                </div>
+            </div>
             <div class="row">
                 @forelse($gproducts as $gproduct)
                     <div class="col-6 col-lg-4 card-catalog-height">

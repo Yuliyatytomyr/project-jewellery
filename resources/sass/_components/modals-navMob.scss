@@ -1,4 +1,4 @@
-#modal-mobile-busket,#modal-mobile-menu{
+#modal-mobile-busket, #modal-mobile-menu, #modal-mobile-filter{
   .modal-content {
     border-radius: 0rem !important;
     border: none!important;
@@ -8,7 +8,7 @@
   }
 }
 @media (max-width: 575px){
-  #modal-mobile-busket,#modal-mobile-menu{
+  #modal-mobile-busket, #modal-mobile-menu{
     top: 55px!important;
     .modal-dialog {
       height: 100%!important;
@@ -19,7 +19,7 @@
   }
 }
 @media (min-width: 576px){
-  #modal-mobile-busket,#modal-mobile-menu{
+  #modal-mobile-busket, #modal-mobile-menu{
     top: 68.5px!important;
   }
 }

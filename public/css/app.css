@@ -4138,6 +4138,12 @@ button:focus {
   outline: none !important;
 }
 
+.btn-secondary {
+  color: #ffffff;
+  background-color: #000 !important;
+  border-color: #000 !important;
+}
+
 .btn-password {
   right: 0;
   background: transparent !important;
@@ -6755,13 +6761,15 @@ input[type=radio]:checked + label {
 }
 
 #modal-mobile-busket .modal-content,
-#modal-mobile-menu .modal-content {
+#modal-mobile-menu .modal-content,
+#modal-mobile-filter .modal-content {
   border-radius: 0rem !important;
   border: none !important;
 }
 
 #modal-mobile-busket .modal-backdrop,
-#modal-mobile-menu .modal-backdrop {
+#modal-mobile-menu .modal-backdrop,
+#modal-mobile-filter .modal-backdrop {
   background-color: #0000 !important;
 }
 
@@ -7260,6 +7268,7 @@ input[type=radio]:checked + label {
   padding: 6px 0;
   border-bottom: 1px solid #00000017;
   width: 100%;
+  color: black;
 }
 
 .nav-Mobprod .menu_itemMob svg {
@@ -7295,7 +7304,7 @@ input[type=radio]:checked + label {
 
 .nav-Mobprod .submenu-content .links ul li img {
   width: 65px;
-  height: 60px;
+  height: 65px;
   margin-right: 25px;
 }
 

@@ -9,7 +9,7 @@
             let type = $(this).data('type');
             // $('.holder').show();
 
-            let pageLinks = $('.personal-area_bar').find('.personal-area_bar-list');
+            let pageLinks = $('.personal-area_bar').find('.personal-area_bar-list')
 
             pageLinks.each(function (i, e) {
                 let linkType = $(e).data('type');
