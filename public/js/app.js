@@ -36105,6 +36105,12 @@ if (token) {
         $(".menu-toggle").toggleClass('d-n');
         $(".menu-toggle-cross").toggleClass('d-n');
         e.stopPropagation();
+      });
+      $('body').on('click', '#filterMob', function (e) {
+        $('#modal-mobile-filter').modal({
+          backdrop: 'static',
+          keyboard: false
+        });
       }); //     sub-menu(mobile)
 
       var menulink = $(".nav-Mobprod > li");
@@ -36132,14 +36138,13 @@ if (token) {
 (function ($) {
   $(function () {
     $(document).ready(function () {
-      // begin scripts
       $('body').on('click', '.card-store_img-prev .thumb', function () {
         var imgThumb = $(this).attr('src');
         var wrapFull = $('#card-store_img-main');
         var imgArr = wrapFull.find('img');
         var thumb = $(".thumb");
-        $(this).addClass("thumb-active");
-        thumb.not(this).removeClass("thumb-active");
+        $(this).css("border", "1px solid black");
+        thumb.not(this).css("border", "0px solid black");
         imgArr.each(function (i, e) {
           var newImg = $(e).attr('src');
 

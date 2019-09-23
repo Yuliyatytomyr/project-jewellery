@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="516220a0-9596-430d-b1fc-b0a4cf0afb7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/sass/_responsive/_navMob.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api.project-it.top.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api.project-it.top.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/user/pages/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/user/pages/all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_components/_header-fixedDesk.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_components/_header-fixedDesk.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/user/pages/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/user/pages/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/user/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/user/pages/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_components/_button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_components/modals-navMob.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_components/modals-navMob.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_responsive/_navMob.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_responsive/_navMob.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/app/layouts/auth_modals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/app/layouts/auth_modals.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/app/layouts/nav-shablon/nav-static.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/app/layouts/nav-shablon/nav-static.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/app/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/app/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/category/show/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/category/show/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/product/show/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/product/show/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/subcategory/show/layouts/sidebar_filter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/subcategory/show/layouts/sidebar_filter.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/subcategory/show/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/subcategory/show/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,6 +140,7 @@
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/cloudipsp/php-sdk-v2" />
     </include_path>
   </component>
   <component name="ProjectId" id="1R3uMpuhwa6gGhKM04tulzT53ix" />
@@ -176,7 +185,9 @@
       <updated>1568702032583</updated>
       <workItem from="1568702033813" duration="4103000" />
       <workItem from="1568719599313" duration="1466000" />
-      <workItem from="1568908062782" duration="24097000" />
+      <workItem from="1568908062782" duration="24521000" />
+      <workItem from="1569153018416" duration="325000" />
+      <workItem from="1569227308596" duration="18044000" />
     </task>
     <servers />
   </component>
@@ -188,7 +199,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
