@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Subcategory;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
 
 class GproductController extends Controller
 {
@@ -116,38 +117,39 @@ class GproductController extends Controller
 
 
     public function updateGproduct(Request $request, $id){
+        try {
 
-        Gproduct::find($id)->update($request->all());
+            Gproduct::find($id)->update($request->all());
+            Product::where("gproduct_id", $id)->update($request->except([
+                'alias','item_code','name_ru',
+                'name_ua','desc_ru','desc_ua',
+                'new_on', 'topsale_on','sprice_on'
+            ]));
 
-        return response()->json(200);
-    }
-
-    public function updateProduct(Request $request, $id){
-
-        Product::where("gproduct_id", $id)->update($request->all());
-        
-        return response()->json(200);
+            return response()->json(200);
+        } catch (\Throwable $th) {
+            return response()->json($th, 400);
+        }
     }
 
     public function updateGproductPhoto(Request $request, $id){
 
-        $image = $request->file('photo');
-        $fileName = time() . '.' . $image->getClientOriginalExtension();
-        //echo $fileName;
-        $img = Image::make($image->getRealPath());
-        $img->resize(120, 120, function ($constraint) {
-            $constraint->aspectRatio();                 
-        });
-
-        $img->stream(); // <-- Key point
-        Storage::disk('local')->put('images/uploads/gproducts_img'.'/'.$fileName, $img, 'public');
-
-        $path = array('images/uploads/gproducts_img'.'/'.$fileName);
-
-        $gproduct = Gproduct::where('id', $id)->update(['gallery' => json_encode($path) ]);
-
-        // print_r($gproduct);
-        return response()->json($gproduct, 200);
-
+        $photos = $request->all();
+        $array = array();
+        $array_send = array();
+        foreach ($photos as $photo) {
+            $fileName = time().rand(). '.' . $photo->getClientOriginalExtension();
+            $img = Image::make($photo->getRealPath());
+            $img->stream();
+            $path = "images/uploads/gproducts_img/$fileName";
+            array_push($array, $path);
+            $photoName = $photo->getClientOriginalName();
+            $array_send["$photoName"] = $path; 
+            //print_r($array_send);
+            Gproduct::where('id', $id)->update(['gallery' => json_encode($array) ]);
+            Storage::disk('public')->put('images/uploads/gproducts_img/'.$fileName, $img, 'public');
+        }
+        return response()->json($array_send, 200);
+        // Storage::disk('public')->put('images/uploads/gproducts_img'.'/'.$fileName, $img, 'public');
     }
 }
