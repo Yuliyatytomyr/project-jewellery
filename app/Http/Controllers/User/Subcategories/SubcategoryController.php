@@ -14,9 +14,16 @@ use App\Models\Pvalue;
 class SubcategoryController extends Controller
 {
 
+    public function getSubcategoriesByIdCategory($idCategory){
+        $subCategories = Subcategory::where('category_id', $idCategory)->with(['category'])->get();
+
+        return $subCategories;
+    }
+
     public function getSubcategories(){
-            $subCategories = Subcategory::all('id', 'alias', 'name_ru', 'name_ua');
-    
+
+            $subCategories = Subcategory::with(['category'])->get();
+
             return $subCategories;
     }
 

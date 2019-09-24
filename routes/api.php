@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('categories', 'User\Categories\CategoryController@getCategories');
 Route::get('subcategories', 'User\Subcategories\SubcategoryController@getSubcategories');
+Route::get('/{category}/subcategories', 'User\Subcategories\SubcategoryController@getSubcategoriesByIdCategory');
 
 Route::group(['prefix' => 'gproducts'], function(){
     Route::get('/categories/{category}', 'GproductController@getByCategory');
