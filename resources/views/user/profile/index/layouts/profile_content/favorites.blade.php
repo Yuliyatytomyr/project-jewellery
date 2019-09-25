@@ -4,9 +4,8 @@
             @include('user.profile.index.layouts.profile_content.favorites_layouts.new_product_card')
         </div>
     @empty
-        Нет данных
+        @include('user.profile.index.layouts.profile_content.favorites_layouts.clean_favorite_block')
     @endforelse
-
 </div>
 <div class="row">
         {{ $gproducts->links('vendor.pagination.pagination_catalog') }}

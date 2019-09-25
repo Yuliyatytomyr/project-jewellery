@@ -1,4 +1,4 @@
-<div id="profile-block" class="d-f fd-c ">
+<div id="profile-block" class="d-f fd-c mt-3 mt-lg-0">
     <h3>Личные данные</h3>
     <div id="profile-user" class="row">
         @include('user.profile.index.layouts.profile_content.profile_layouts.profile_user')

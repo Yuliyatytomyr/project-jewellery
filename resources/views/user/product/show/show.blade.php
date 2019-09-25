@@ -110,12 +110,12 @@
                             <p class="mb-3 mb-md-0 ml-2 m-0">Добавить в избранное</p>
                         </div>
                     </div>
-                    <div class="d-f ai-c credit-privat">
-                        <div class="">
-                            <img class="w-75" src="{{ asset('img/pie-chart.png')}}">
-                        </div>
-                        <div>
-                            <a href="" class="cl-g">Оплата частями (доступно на чек от 1000 грн.)</a>
+                    <div class="d-f ai-c jc-c t-c credit-privat product_likeBlock">
+{{--                        <div class="">--}}
+{{--                            <img class="w-75" src="{{ asset('img/pie-chart.png')}}">--}}
+{{--                        </div>--}}
+                        <div class="mb-3">
+                            <a href="" class="cl-g">Оплата частями <br> (доступно на чек от 1000 грн.)</a>
                         </div>
                     </div>
                 </div>

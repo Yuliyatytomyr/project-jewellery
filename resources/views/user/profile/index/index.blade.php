@@ -5,18 +5,18 @@
 {{--    <div id="test" style="margin-top: 500px;">{{Request::path() }}</div>--}}
 
     <div class="personal mt-3 mb-3">
-        <h2>Личный кабинет</h2>
+        <h3>Личный кабинет</h3>
         <div class="row d-f ai-s jc-b mt-4 mb-4">
-            <div id="private-office_sidebar" class="col-3 personal-area">
+            <div id="private-office_sidebar" class="col-12 col-lg-3 personal-area">
                 <aside>
-                    <div class="personal-area_name pt-4 pb-4 pr-2 pl-2">
-                        {{ (isset(Auth::user()->name)) ? Auth::user()->name .' '.Auth::user()->surname : Auth::user()->email }}
+                    <div class="personal-area_name pt-3 pt-lg-4 pb-lg-2 pr-2 pl-2">
+                        <p>{{ (isset(Auth::user()->name)) ? Auth::user()->name .' '.Auth::user()->surname : Auth::user()->email }}</p>
                     </div>
 
-                    <?
+                    @php
                         $current_page = \Request::only('page_type');
                         $cur_p = (isset($current_page['page_type']))?$current_page['page_type']:'profile';
-                    ?>
+                    @endphp
 
                     <div class="personal-area_bar d-f fd-c ai-s jc-c p-0 mt-3">
                         <a class="@if($cur_p == 'profile') active @endif personal-area_bar-list p-2 w-1p d-f" href="{{ asset(app()->getLocale().'\customer\profile') }}" data-type="profile">
@@ -38,10 +38,8 @@
                     </div>
                 </aside>
             </div>
-            <div id="private-office_content" class="personal-content col-9">
-
+            <div id="private-office_content" class="personal-content col-12 col-lg-9">
                     {!!$page_content!!}
-
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
                             <div class="form-group">
                                 <label for="gp-subcat-id">Подкатегория товара</label>
                                 <select name="subcategory_id" class="form-control" id="gp-subcat-id" data-url="{{ asset(app()->getLocale().'/manager/subcategory/get_related_params') }}">
-                                    <option value="null">Выбирете подкатегорию</option>
+                                    <option value="null">Выберите подкатегорию</option>
                                     @forelse($subcategories as $subcategory)
                                         <option value="{{ $subcategory->id }}">({{ $subcategory->category->getNameTran() }}) {{ $subcategory->getNameTran() }}</option>
                                     @empty
@@ -65,12 +65,59 @@
                         <textarea class="form-control" name="desc_ua" id="gproduct-desc-ua" rows="2"></textarea>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gproduct-barcode">Barcode</label>
+                        <textarea class="form-control" name="barcode" id="gproduct-barcode" rows="1" required></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gproduct-weight">Вес товара</label>
+                        <input type="number" class="form-control" id="gproduct-weight" name="weight" placeholder="Вес товара">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-g_price">Старая цена</label>
+                        <input type="number" class="form-control" id="gp-g_price" name="g_price" placeholder="Старая цена">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-total_sum">Новая цена</label>
+                        <input type="number" class="form-control" id="gp-total_sum" name="total_sum" placeholder="Новая цена">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-sale">Скидка</label>
+                        <input type="number" class="form-control" id="gp-sale" name="sale" placeholder="Скидка %">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-status">Статус</label>
+                        <select name="status" class="form-control" id="gp-status">
+                            <option value="new">New</option>
+                            <option value="reserve">Reserve</option>
+                            <option value="sold">Sold</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-size">Размер</label>
+                        <select name="size" class="form-control" id="gp-size">
+                            <option value="null">Выберите размер</option>
+                        </select>
+                    </div>
+                </div>
             </form>
             <hr>
             <div class="row" id="select-params-place">
                 @include('administration.manager.gproducts.create.layouts.select_params')
             </div>
-
             <hr>
             <h3 class="w-100 text-center">Характеристики товара</h3>
             <div class="row" id="gproduct-params-place">
@@ -96,7 +143,6 @@
             let subcatId = $(this).val();
             let formData = new FormData();
             formData.append('id', subcatId);
-
             sendAction(url, formData, (data) => {
                 toastr.success(data.msg);
                 $('#gproduct-params-place').html('');
@@ -115,7 +161,6 @@
                     let paramElemId = $(e).data('param');
                     if(paramElemId == paramId){ flag = false; }
                 });
-
                 if(flag){
                     let form = $('#'+$(this).attr('form'));
                     let url = form.attr('action');
@@ -142,7 +187,6 @@
             $.each(data, function (i, v) {
                 formData.append(v.name, v.value);
             });
-
             sendForm(form, url, formData, function(data){
 
                 if(data.status == 'success'){

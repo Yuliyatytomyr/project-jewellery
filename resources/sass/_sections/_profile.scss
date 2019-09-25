@@ -8,7 +8,7 @@
     border: 1px solid $grey;
     margin: -2px -1px;
     & a {
-      color: $grey;
+      color: #000;
       font-size: 1.1rem;
       transition: background-color .3s ease,color .3s ease;
     }
@@ -22,13 +22,13 @@
 
   .personal-area_bar-list.active,
   .personal-area_bar-list.active a {
-    background: $grey;
+    background: #000;
     color: #fff !important;
     transition: background-color .3s ease,color .3s ease;
   }
   .personal-area_bar-list:hover,
   .personal-area_bar-list:hover a{
-    background: $grey;
+    background: #000;
     color: #fff !important;
     transition: background-color .3s ease,color .3s ease;
   }

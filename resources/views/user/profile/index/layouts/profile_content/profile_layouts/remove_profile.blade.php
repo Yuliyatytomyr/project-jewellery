@@ -37,7 +37,6 @@
         <div class="t-c mt-4 mb-4 d-f jc-c">
             <button type="button" class="cl-w btn-profile" id="profile-user-edit-submit" form="profile-user-edit-form">Сохранить</button>
         </div>
-
         <div class="t-c d-f jc-c">
             <button type="button" class="btn-form btn-profile cl-w" data-close="remove-profile" data-open="profile-user">Отменить</button>
         </div>

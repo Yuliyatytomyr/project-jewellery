@@ -67,6 +67,54 @@
                         <textarea class="form-control" name="desc_ua" id="gproduct-desc-ua" rows="2">{{ $gproduct->desc_ua }}</textarea>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gproduct-barcode">Barcode</label>
+                        <textarea class="form-control" name="barcode" id="gproduct-barcode" rows="1"></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gproduct-weight">Вес товара</label>
+                        <input type="number" class="form-control" id="gproduct-weight" name="weight" placeholder="Вес товара">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-g_price">Старая цена</label>
+                        <input type="number" class="form-control" id="gp-g_price" name="g_price" placeholder="Старая цена">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-total_sum">Новая цена</label>
+                        <input type="number" class="form-control" id="gp-total_sum" name="total_sum" placeholder="Новая цена">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-sale">Скидка</label>
+                        <input type="number" class="form-control" id="gp-sale" name="sale" placeholder="Скидка %">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-status">Статус</label>
+                        <select name="status" class="form-control" id="gp-status">
+                            <option value="new">New</option>
+                            <option value="reserve">Reserve</option>
+                            <option value="sold">Sold</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="gp-size">Размер</label>
+                        <select name="size" class="form-control" id="gp-size">
+                            <option value="null">Выберите размер</option>
+                        </select>
+                    </div>
+                </div>
             </form>
             <hr>
             <div class="row" id="select-params-place">

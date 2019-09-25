@@ -17,7 +17,10 @@
         <div class="col-12">
             <h4 class="mb-3 mt-3">{{ $title }}</h4>
         </div>
-        <div class="col-3 backet-form filter-item d-n dlg-b">
+        <div class="col-12 dlg-n mb-4">
+            <button id="filterMob" class="cl-w btn-profile mr-md-3 mr-0">Фильтр</button>
+        </div>
+        <div class="col-lg-3 backet-form filter-item d-n dlg-b">
             @include('user.category.show.layouts.sidebar_filter')
         </div>
         <div class="col-12 col-lg-9">
@@ -42,11 +45,6 @@
                     </div>
                 </div>
             @endif
-            <div class="row">
-                <div class="col-12 dlg-n mb-4">
-                    <button id="filterMob" class="cl-w btn-profile mr-md-3 mr-0">Фильтр</button>
-                </div>
-            </div>
             <div class="row">
                 @forelse($gproducts as $gproduct)
                     <div class="col-6 col-lg-4 card-catalog-height">

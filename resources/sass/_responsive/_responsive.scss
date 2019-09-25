@@ -81,4 +81,10 @@
   .about-us {
     border: 1px solid #333435;
   }
+  .modal-backdrop.show {
+    opacity: 0!important;
+  }
+  #modal-mobile-menu,#modal-mobile-busket{
+    display: none!important;
+  }
 }
