@@ -18,6 +18,7 @@ use App\Models\Pvalue;
 use App\Models\Gpparam;
 use App\Models\Gpvalue;
 use App\Models\Gpimage;
+use App\Models\Product;
 
 
 
@@ -66,7 +67,12 @@ class GproductController extends Controller
             'name_ua' => ['required', 'string', 'max:50'],
             'gallery' => ['required', 'string'],
             'desc_ru' => ['required', 'string'],
-            'desc_ua' => ['required', 'string']
+            'desc_ua' => ['required', 'string'],
+            'barcode' => ['required', 'string'],
+            'weight' => ['required', 'numeric'],
+            'g_price' => ['required', 'numeric'],
+            'total_sum' => ['required', 'numeric'],
+            'sale' => ['required', 'numeric'],
         ]);
 
         if ($validator->fails()) {
@@ -93,6 +99,20 @@ class GproductController extends Controller
             'topsale_on' => 0,
             'sprice_on' => 0
         ]);
+
+        $product = new Product();
+        $product->barcode = $request->input('barcode');
+        $product->gproduct_id = $new_gproduct->id;
+        $product->size = $request->input('size');
+        $product->weight = $request->input('weight');
+        $product->g_price = $request->input('g_price');
+        $product->sale = $request->input('sale');
+        $product->total_sum = $request->input('total_sum');
+        if($request->input('status')){
+            $product->status = $request->input('status');
+        }
+
+        $product->save();
 
         $gallery_array = explode (',',$request->gallery );
         self::createNewGpimages($new_gproduct->id, $gallery_array);

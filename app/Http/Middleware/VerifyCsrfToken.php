@@ -22,6 +22,7 @@ class VerifyCsrfToken extends Middleware
         '/dropzone/deleteFiles',
         'mailing-subscribe',
         'mailing-unsubscribe',
-        'payment'
+        'payment',
+        'ua/manager/gproducts'
     ];
 }
