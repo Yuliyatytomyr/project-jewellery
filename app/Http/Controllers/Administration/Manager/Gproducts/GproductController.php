@@ -73,6 +73,7 @@ class GproductController extends Controller
             'g_price' => ['required', 'numeric'],
             'total_sum' => ['required', 'numeric'],
             'sale' => ['required', 'numeric'],
+            'size' => ['required', 'numeric']
         ]);
 
         if ($validator->fails()) {
@@ -80,7 +81,7 @@ class GproductController extends Controller
             return response()->json([
                 'status' => 'validation',
                 'errors' => $validator->getMessageBag()->toArray()
-            ], 200);
+            ], 400);
         }
 
 
@@ -108,7 +109,7 @@ class GproductController extends Controller
         $product->g_price = $request->input('g_price');
         $product->sale = $request->input('sale');
         $product->total_sum = $request->input('total_sum');
-        if($request->input('status')){
+        if($request->input('status') || !empty($request->input('status'))){
             $product->status = $request->input('status');
         }
 

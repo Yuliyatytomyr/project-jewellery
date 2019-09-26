@@ -23,6 +23,7 @@ class VerifyCsrfToken extends Middleware
         'mailing-subscribe',
         'mailing-unsubscribe',
         'payment',
-        'ua/manager/gproducts'
+        'ua/manager/gproducts',
+        'payment/result'
     ];
 }

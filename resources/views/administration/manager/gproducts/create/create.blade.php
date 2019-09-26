@@ -73,6 +73,7 @@
                                 <label for="gp-size">Размер</label>
                                 <select name="size" class="form-control" id="gp-size">
                                     <option value="null">Выберите размер</option>
+                                    <option value="1">1</option>
                                 </select>
                             </div>
                         </div>

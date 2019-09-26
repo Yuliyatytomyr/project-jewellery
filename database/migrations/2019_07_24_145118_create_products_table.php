@@ -18,11 +18,12 @@ class CreateProductsTable extends Migration
             $table->string('barcode')->unique();
             $table->bigInteger('gproduct_id')->unsigned();
             $table->float('size', 4, 1)->nullable();
-            $table->float('weight', 7, 3);
-            $table->float('g_price', 7, 2);
+            $table->float('weight', 7, 3)->nullable();
+            $table->float('g_price', 7, 2)->nullable();
             $table->integer('sale')->default(0);
-            $table->float('total_sum', 8, 2);
+            $table->float('total_sum', 8, 2)->nullable();
             $table->enum('status', ['new', 'reserve', 'sold'])->default('new');
+            $table->text('orderData');
             $table->timestamps();
 
             $table->foreign('gproduct_id')->references('id')->on('gproducts')->onDelete('cascade');

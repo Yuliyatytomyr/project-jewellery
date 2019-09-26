@@ -15,6 +15,7 @@ Route::group(['prefix' => 'mailing'], function(){
 });
 Route::group(['prefix' => 'payment'], function(){
     Route::post('/', 'Payment\PaymentController@payment');
+    Route::post('/result', 'Payment\PaymentController@result');
 });
 Route::group(['prefix' => 'gproducts'], function(){
     Route::get('/show', function(){
@@ -229,7 +230,6 @@ Route::group(
       Routes only for manager
     */
     Route::group(['prefix' => 'manager','middleware' => 'manager'], function(){
-        
         // home for manager
         Route::get('/', 'Administration\Manager\Home\HomeController@index')->name('manager.home');
         // categories routs
