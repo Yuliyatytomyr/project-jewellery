@@ -235,7 +235,7 @@ Route::group(
       Routes only for manager
     */
     // 'middleware' => 'manager'
-    Route::group(['prefix' => 'manager'], function(){
+    Route::group(['prefix' => 'manager','middleware' => 'manager'], function(){
         // home for manager
         Route::get('/', 'Administration\Manager\Home\HomeController@index')->name('manager.home');
         // categories routs
