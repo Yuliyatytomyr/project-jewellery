@@ -51,6 +51,7 @@ class GproductController extends Controller
             $find = Gproduct::find($gproduct);
             $category = $find->category;
             $subcategory = $find->subcategory;
+            $gpimages = $find->gpimages;
 
             return response()->json($find, 200);
 
