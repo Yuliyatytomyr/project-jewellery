@@ -7,15 +7,20 @@ Route::redirect('/', '/'.app()->getLocale(), 301);
 Route::redirect('administration', app()->getLocale().'/administration', 301);
 
 /////////////////////////////////////////////////////////////////////////////////////
-// Route::post('mailing-subscribe', 'MailingFromSiteController@subscribe');
-// Route::delete('mailing-unsubscribe', 'MailingFromSiteController@unsubscribe');
+Route::get('/test', 'Payment\PaymentController@test');
+
+Route::group(['prefix' => 'period_product'], function(){
+    Route::get('/', 'PeriodProductController@index');
+    Route::get('/{period_product}', 'PeriodProductController@show');
+});
+
 Route::group(['prefix' => 'mailing'], function(){
     Route::post('/subscribe', 'MailingFromSiteController@subscribe');
     Route::delete('/unsubscribe', 'MailingFromSiteController@unsubscribe');
 });
 Route::group(['prefix' => 'payment'], function(){
     Route::post('/', 'Payment\PaymentController@payment');
-    Route::post('/result', 'Payment\PaymentController@result');
+    Route::post('/approved', 'Payment\PaymentController@approved');
 });
 Route::group(['prefix' => 'gproducts'], function(){
     Route::get('/show', function(){
@@ -229,7 +234,8 @@ Route::group(
     /*
       Routes only for manager
     */
-    Route::group(['prefix' => 'manager','middleware' => 'manager'], function(){
+    // 'middleware' => 'manager'
+    Route::group(['prefix' => 'manager'], function(){
         // home for manager
         Route::get('/', 'Administration\Manager\Home\HomeController@index')->name('manager.home');
         // categories routs

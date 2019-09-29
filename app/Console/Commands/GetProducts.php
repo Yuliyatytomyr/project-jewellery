@@ -1,21 +1,45 @@
 <?php
 
-namespace App\Http\Controllers\Payment;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use \Cloudipsp\Configuration;
-use \Cloudipsp\Checkout;
+namespace App\Console\Commands;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Product;
 use App\Models\PeriodProduct;
-use App\Models\Gproduct;
-use Illuminate\Support\Facades\Storage;
-use Goutte\Client;
-use Symfony\Component\DomCrawler\Crawler;
+use Illuminate\Console\Command;
 
-class PaymentController extends Controller
+class GetProducts extends Command
 {
-    public function test(){
-                
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'get:products';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'This will get products';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        //
         $file_n = Storage::disk('public')->path('12345.csv');
 
         $file = fopen('php://memory', 'w+');
@@ -119,96 +143,6 @@ class PaymentController extends Controller
         }
         //print_r($all_data);
         fclose($file);
-
-        return response('Success', 200);
-       
-       
-    }
-
-    public function payment(Request $request){
-        // print_r($request->product_id);
-        // print_r(gettype($request->product_id));
-        Configuration::setMerchantId(1396424);
-        Configuration::setSecretKey('test');
-
-        $data = [
-                'order_desc' => 'Checkout',
-                'currency' => $request->input('currency'),
-                'amount' => $request->input('amount'),
-                'response_url' => 'http://localhost:8000/payment/approved',
-                'server_callback_url' => 'https://localhost:8000/payment/result',
-                'sender_email' => $request->input('email'),
-                'lang' => 'ru',
-                'product_id' => $request->product_id,
-                'lifetime' => 36000,
-                'sender_cell_phone' => $request->sender_cell_phone,
-                'merchant_data' => array(
-                    'custom_data1' => 'Some string'
-                )
-        ];
-
-        $url = Checkout::url($data);
-        $token = Checkout::token($data);
-        $data = $url->getData();
-        return $data;     
-        // $someArray = [
-        //     [
-        //     //   "gproduct_id" => 2,
-        //       "size" => 18,
-        //       "weight" => 18,
-        //       "g_price" => 16,
-        //       "sale" => 4,
-        //       "total_sum" => 222
-        //     ],
-        //     [
-        //         "size" => 17.5,
-        //         "weight" => 18,
-        //         "g_price" => 16,
-        //         "sale" => 4,
-        //         "total_sum" => 222
-        //     ],
-        //     [
-        //         "size" => 18,
-        //         "weight" => 18,
-        //         "g_price" => 16,
-        //         "sale" => 4,
-        //         "total_sum" => 222
-        //     ]
-        //   ];
-        // $someJSON = json_encode($someArray);
-
-        // //Product::where('gproduct_id', 8)->update(['orderData' => $someJSON]);
-
-        // //echo $someJSON;
-        // $product = Product::where('gproduct_id', 8)->get();
-
-        // echo $product;
-
-    }
-
-    public function approved(){
-        try {
-            
-            $result = new \Cloudipsp\Result\Result();
-            if ($result->getData()){
-                print_r(json_encode($result->getData(), true));
-                // print_r(json_encode($result->getData()["order_id"], true));
-                // print_r($result->getData()["product_id"]);
-                // print_r(gettype($result->getData()["product_id"]));
-
-                // $products_id = explode( ",", $result->getData()["product_id"]);
-                // print_r($products_id);
-                // print_r(gettype($products_id));
-                //$res = json_encode($result->getData());
-                //print_r($res["order_id"]);
-                //return view('payment')->with('result', $result->getData());
-            }
-            else{
-                die('No data');
-            }
-
-        } catch (\Exception $e) {
-                echo "Fail: " . $e->getMessage();
-        }
+        echo 'Operation get products done';
     }
 }

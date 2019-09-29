@@ -15,6 +15,7 @@ class CreateMailingFromSitesTable extends Migration
     {
         Schema::create('mailing_from_sites', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
             $table->string('email');
             $table->timestamps();
         });

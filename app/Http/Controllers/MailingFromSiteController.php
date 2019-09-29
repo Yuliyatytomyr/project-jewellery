@@ -11,7 +11,8 @@ class MailingFromSiteController extends Controller
     public function subscribe(Request $request){
         
         $user = MailingFromSite::updateOrCreate(['email' => request('email')], [ 
-            'email' => request('email')
+            'email' => request('email'),
+            'name' => request('name')
         ]);
 
         return response("Saved to DB", 200);

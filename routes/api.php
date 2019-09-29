@@ -32,3 +32,9 @@ Route::group(['prefix' => 'gproducts'], function(){
     // Route::put('/{gproduct}/product', 'GproductController@updateProduct');
     Route::post('/photo/{gproduct}', 'GproductController@updateGproductPhoto');
 });
+
+Route::group(['prefix' => 'period_product'], function(){
+    Route::get('/', 'PeriodProductController@getAll');
+    Route::get('/{period_product}', 'PeriodProductController@getById');
+    Route::post('/', 'PeriodProductController@create');
+});

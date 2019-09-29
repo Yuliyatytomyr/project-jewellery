@@ -8,6 +8,7 @@ class MailingFromSite extends Model
 {
     //
     protected $fillable = [
+        'name',
         'email'
     ];
 }

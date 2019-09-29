@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         'App\Console\Commands\CronTrashimagesdelete',
-        'App\Console\Commands\MailingOfLetters'
+        'App\Console\Commands\MailingOfLetters',
+        'App\Console\Commands\GetProducts'
     ];
 
     /**
@@ -33,6 +34,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('cron:trashimagesdelete')->dailyAt('1:00');
 
         $schedule->command('mailing:letters')->everyMinute();
+
+        $schedule->command('get:products')->everyFiveMinutes();
     }
 
     /**

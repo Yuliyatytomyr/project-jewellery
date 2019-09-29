@@ -20,10 +20,12 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/dropzone/deleteFiles',
-        'mailing-subscribe',
-        'mailing-unsubscribe',
+        'mailing/subscribe',
+        'mailing/unsubscribe',
         'payment',
         'ua/manager/gproducts',
-        'payment/result'
+        'payment/result',
+        'payment/approved',
+        'dropzone/uploadFiles'
     ];
 }
