@@ -26,6 +26,7 @@ class VerifyCsrfToken extends Middleware
         'ua/manager/gproducts',
         'payment/result',
         'payment/approved',
-        'dropzone/uploadFiles'
+        'dropzone/uploadFiles',
+        'ua/login'
     ];
 }

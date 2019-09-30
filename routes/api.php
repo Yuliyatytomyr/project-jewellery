@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,6 +25,7 @@ Route::group(['prefix' => 'gproducts'], function(){
     Route::get('/categories/{category}', 'GproductController@getByCategory');
     Route::get('/subcategories/{subcategory}', 'GproductController@getBySubcategory');
     Route::get('/', 'GproductController@index');
+    Route::get('/multiply', 'GproductController@multiply');
     Route::get('/{gproduct}', 'GproductController@show');
     Route::post('/', 'GproductController@store');
     Route::delete('/{gproduct}', 'GproductController@destroy');

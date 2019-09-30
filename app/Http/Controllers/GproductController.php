@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Hash;
 class GproductController extends Controller
 {
     //
+    public function multiply(){
+        try {
+            // session(['products' => ['5', '6']]);
+            $find = Gproduct::with(['category', 'subcategory', 'gpimages'])->findMany(session()->get('products'));
+
+            return response()->json($find, 200);
+        } catch (\Throwable $th) {
+            return response()->json($th, 400);
+        }
+    }
+
     public function getBySubcategory($subcategoryId){
         try {
             $find = Gproduct::where('subcategory_id', $subcategoryId)->with(['category', 'subcategory'])->get();
