@@ -188,6 +188,13 @@
             menulink.not(this).toggleClass("d-n");
             event.stopPropagation();
         });
+        // спойлер на главной странице
+        $(document).ready(function(){
+            $('.spoiler-title').click(function(){
+               $ ('.spoiler-body').slideToggle();
+                return false;
+            });
+        });
     // end scripts
     });
 })

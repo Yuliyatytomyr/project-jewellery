@@ -7,6 +7,6 @@
         @include('user.profile.index.layouts.profile_content.favorites_layouts.clean_favorite_block')
     @endforelse
 </div>
-<div class="row">
+<div class="row mt-lg-5 d-f jc-c">
         {{ $gproducts->links('vendor.pagination.pagination_catalog') }}
 </div>

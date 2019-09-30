@@ -82,6 +82,10 @@
 .thumb-active{
   border: 1px solid black;
 }
+.pay-parts:hover{
+    color: black!important;
+    text-decoration: underline;
+}
 
 @media (max-width: 767px) {
   .card-store .card-store_img .card-store_img-main img {
@@ -123,6 +127,9 @@
     }
   }
 }
-@media (max-width: 992px){
-
+@media (min-width: 768px){
+    .credit-privat{
+        justify-content: flex-start;
+        text-align: left;
+    }
 }

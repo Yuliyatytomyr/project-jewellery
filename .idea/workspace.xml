@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="516220a0-9596-430d-b1fc-b0a4cf0afb7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/user/pages/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/user/pages/all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_sections/_product.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_sections/_product.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/administration/admin/app/side_bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administration/admin/app/side_bar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/administration/manager/gproducts/create/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administration/manager/gproducts/create/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/administration/manager/gproducts/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administration/manager/gproducts/edit/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/administration/manager/gproducts/index/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administration/manager/gproducts/index/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/home/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/home/about-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/product/show/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/product/show/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/profile/index/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile/index/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/profile/index/layouts/profile_content/favorites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile/index/layouts/profile_content/favorites.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +201,12 @@
       <workItem from="1569227308596" duration="18044000" />
       <workItem from="1569250678986" duration="788000" />
       <workItem from="1569309732425" duration="8673000" />
-      <workItem from="1569400115795" duration="18302000" />
+      <workItem from="1569400115795" duration="21271000" />
+      <workItem from="1569488175937" duration="21579000" />
+      <workItem from="1569569509948" duration="24020000" />
+      <workItem from="1569682061754" duration="741000" />
+      <workItem from="1569784317586" duration="127000" />
+      <workItem from="1569831600339" duration="3278000" />
     </task>
     <servers />
   </component>

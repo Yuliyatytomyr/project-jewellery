@@ -111,11 +111,11 @@
                         </div>
                     </div>
                     <div class="d-f ai-c jc-c t-c credit-privat product_likeBlock">
-{{--                        <div class="">--}}
-{{--                            <img class="w-75" src="{{ asset('img/pie-chart.png')}}">--}}
-{{--                        </div>--}}
-                        <div class="mb-3">
-                            <a href="" class="cl-g">Оплата частями <br> (доступно на чек от 1000 грн.)</a>
+                        <div class="d-n dmd-b">
+                            <img class="w-75" src="{{ asset('img/pie-chart.png')}}">
+                        </div>
+                        <div class="mb-3 mt-2">
+                            <a href="" class="pay-parts cl-g">Оплата частями <br> (доступно на чек от 1000 грн.)</a>
                         </div>
                     </div>
                 </div>
@@ -686,10 +686,9 @@
             // });
             $('.morelink').on('click', function(e) {
                 $('.more-hide').slideToggle(function() {
-                    $('.contact-header_icon').addClass('open');
+                    $('.contact-header_icon').toggleClass('open');
                 });
             });
-
         });
     </script>
 @endsection

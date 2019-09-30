@@ -7,7 +7,6 @@
 
             <form class="row forms-sample" id="gproduct-edit-form" action="{{ asset(app()->getLocale().'/manager/gproducts/'.$gproduct->id) }}" enctype="multipart/form-data" method="post">
                 @csrf
-
                 {{ method_field('PUT') }}
                 <input type="hidden" name="redirect" value="{{ asset(app()->getLocale().'/manager/gproducts/') }}">
                 <div class="col-12">
@@ -120,7 +119,6 @@
             <div class="row" id="select-params-place">
                 @include('administration.manager.gproducts.edit.layouts.select_params')
             </div>
-
             <hr>
             <h3 class="w-100 text-center">Характеристики товара</h3>
             <div class="row" id="gproduct-params-place">

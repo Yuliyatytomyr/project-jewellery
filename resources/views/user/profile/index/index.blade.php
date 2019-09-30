@@ -38,7 +38,7 @@
                     </div>
                 </aside>
             </div>
-            <div id="private-office_content" class="personal-content col-12 col-lg-9">
+            <div id="private-office_content" class="personal-content col-12 col-lg-9 mt-3 mt-lg-0">
                     {!!$page_content!!}
             </div>
         </div>

@@ -115,6 +115,64 @@
                     </div>
                 </div>
             </form>
+            <h4>
+                Добавить параметры товара
+                <a title="параметры товара" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-plus text-success"></i></a>
+            </h4>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Добавить характеристики товара</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="mainParmas-product">
+                                <div class="form-group needs-validation">
+                                    <label for="gp-size">Размер</label>
+                                    <select name="size" class="form-control" id="gp-size">
+                                        <option value="null">Выберите размер</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gproduct-weight">Вес товара</label>
+                                    <input type="number" class="form-control" id="gproduct-weight" name="weight" placeholder="Вес товара">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gp-g_price">Старая цена</label>
+                                    <input type="number" class="form-control" id="gp-g_price" name="g_price" placeholder="Старая цена">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gp-total_sum">Новая цена</label>
+                                    <input type="number" class="form-control" id="gp-total_sum" name="total_sum" placeholder="Новая цена">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            <button type="submit" id="safe-mainParmas-product" class="btn btn-primary">Сохранить изменения</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="myHidForm">
+            <div id="info"></div>
+            <table id="ym_merchant_receipt" class="ym_merchant_receipt table table-bordered">
+                <thead class="text-center">
+{{--                    <tr>--}}
+{{--                        <th>size</th>--}}
+{{--                        <th>weight</th>--}}
+{{--                        <th>g_price</th>--}}
+{{--                        <th>total_sum</th>--}}
+{{--                    </tr>--}}
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
             <hr>
             <div class="row" id="select-params-place">
                 @include('administration.manager.gproducts.create.layouts.select_params')
@@ -199,6 +257,33 @@
                 }
             });
 
+        });
+    </script>
+
+    <script>
+        $('#safe-mainParmas-product').on('click', function() {
+            var formData = JSON.stringify($("#mainParmas-product").serializeArray());
+            console.log(formData);
+            var obj = JSON.parse(formData);
+            console.log(obj);
+            var $table = $('#ym_merchant_receipt'),
+                $table_head = $table.find('thead'),
+                $table_body = $table.find('tbody');
+            // Перебираем массив
+                obj.forEach(function (value) {
+                // Добавляем строку в таблицу
+                var $table_tr = $table_body.append('<tr></tr>')
+
+                for(var key in value) {
+                    if (Number(key) !== parseFloat(key)) {
+                        // Создаём заголовки, которых нет
+                        if (!$table.find('thead td:contains("' + key + '")').length) $table_head.append('<td>' + key + '</td>');
+
+                        // Добавляем данные в строку
+                        $table_tr.append('<td>' + value[key] + '</td>')
+                    };
+                };
+            });
         });
     </script>
 @endsection

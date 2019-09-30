@@ -7708,6 +7708,11 @@ main {
   border: 1px solid black;
 }
 
+.pay-parts:hover {
+  color: black !important;
+  text-decoration: underline;
+}
+
 @media (max-width: 767px) {
   .card-store .card-store_img .card-store_img-main img {
     width: 250px;
@@ -7753,6 +7758,13 @@ main {
 
   .delivery-store .all-specifications {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .credit-privat {
+    justify-content: flex-start;
+    text-align: left;
   }
 }
 
