@@ -273,7 +273,6 @@
                 obj.forEach(function (value) {
                 // Добавляем строку в таблицу
                 var $table_tr = $table_body.append('<tr></tr>')
-
                 for(var key in value) {
                     if (Number(key) !== parseFloat(key)) {
                         // Создаём заголовки, которых нет

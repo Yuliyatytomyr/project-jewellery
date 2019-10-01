@@ -6,7 +6,6 @@
             <div class="card">
                 <div class="card-body">
                     <table class="table table-hover table-bordered">
-
                         <thead class="text-center">
                         <tr>
                             <th>Имя</th>
@@ -16,35 +15,7 @@
                             <th>Бренд</th>
                         </tr>
                         </thead>
-
                         <tbody id="gproducts-place">
-
-{{--                            <tr>--}}
-{{--                                <td class="group-id">--}}
-{{--                                    ({{ $gproduct->category->getNameTran() }}) {{ $gproduct->subcategory->getNameTran() }}--}}
-{{--                                </td>--}}
-
-{{--                                <td class="group-id">--}}
-{{--                                    <a href="{{ asset(app()->getLocale().'/manager/gproducts/'.$gproduct->alias) }}">--}}
-{{--                                        {{ $gproduct->getNameTran() }}--}}
-{{--                                    </a>--}}
-{{--                                </td>--}}
-
-{{--                                <td class="text-center">--}}
-{{--                                </td>--}}
-
-{{--                                <td>--}}
-{{--                                    <input type="button" class="delete" name="delete" value="Delete">--}}
-{{--                                </td>--}}
-{{--                                <td class="text-center">--}}
-{{--                                    <a class="text-info mr-3" href="{{ asset(app()->getLocale().'/manager/gproducts/'.$gproduct->alias) }}" title="Просмотреть товар {{ $gproduct->name_ru }}">--}}
-{{--                                        <i class="fa fa-eye"></i>--}}
-{{--                                    </a>--}}
-{{--                                    <a class="text-warning" href="{{ asset(app()->getLocale().'/manager/gproducts/'.$gproduct->alias.'/edit') }}" title="Редактировать товар {{ $gproduct->name_ru }}">--}}
-{{--                                        <i class="fa fa-edit"></i>--}}
-{{--                                    </a>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
                             <tr class="null">
                                 <td colspan="5" class="text-center">Товары не найдены</td>
                             </tr>
@@ -55,10 +26,8 @@
                 </div>
             </div>
         </div>
-
     </div>
     <script>
-
         const  action = ['name', 'price', 'probe', 'weight', 'brand_new'];
         let paginate = {};
 
@@ -123,8 +92,6 @@
             });
             return fragment;
         }
-
-
 
         var Pagination = {
 
