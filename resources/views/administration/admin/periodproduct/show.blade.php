@@ -23,31 +23,31 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="gproduct-weight">Вес товара</label>
-                        <input type="text" class="form-control" id="gproduct-weight" name="weight" placeholder="Вес товара">
+                        <input type="text" class="ss form-control" id="gproduct-weight" name="weight" placeholder="Вес товара">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="gp-g_price">Старая цена</label>
-                        <input type="text" class="form-control" id="gp-g_price" name="g_price" placeholder="Старая цена">
+                        <input type="text" class="ss form-control" id="gp-g_price" name="g_price" placeholder="Старая цена">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="gp-total_sum">Новая цена</label>
-                        <input type="text" class="form-control" id="gp-total_sum" name="total_sum" placeholder="Новая цена">
+                        <input type="text" class="ss form-control" id="gp-total_sum" name="total_sum" placeholder="Новая цена">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="gp-sale">Скидка</label>
-                        <input type="number" class="form-control" id="gp-sale" name="sale" placeholder="Скидка %">
+                        <input type="number" class="ss form-control" id="gp-sale" name="sale" placeholder="Скидка %">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="gp-size">Размер</label>
-                        <select name="size" class="form-control" id="gp-size">
+                        <select name="size" class="ss form-control" id="gp-size">
                             <option id="size"></option>
                             <option value="1">1</option>
                         </select>
@@ -60,9 +60,9 @@
 @section('script2')
     <script>
         $(document).ready (function() {
-            var pageURL = window.location.href;
+            let pageURL = window.location.href;
             console.log(pageURL);
-            var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('/') + 1);
+            let lastURLSegment = pageURL.substr(pageURL.lastIndexOf('/') + 1);
             console.log(lastURLSegment);
             $.ajax({
                 url: '/api/period_product/' + lastURLSegment,
@@ -81,6 +81,7 @@
                     console.log(err)
                 }
             });
+            alert( 6 / 2 );
         });
     </script>
 @endsection

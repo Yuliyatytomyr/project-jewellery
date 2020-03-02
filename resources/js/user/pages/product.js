@@ -1,4 +1,3 @@
-
 (function($){$(function() {
     $(document).ready(function(){
         $('body').on('click', '.card-store_img-prev .thumb', function(){
