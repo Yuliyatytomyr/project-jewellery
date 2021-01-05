@@ -19,7 +19,7 @@
   "devDependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/fontawesome-free": "^5.9.0",
-    "axios": "^0.18",
+    "axios": "^0.21",
     "bootstrap": "^4.1.0",
     "bootstrap-multiselect": "^0.9.13-1",
     "concurrently": "^4.1.1",
